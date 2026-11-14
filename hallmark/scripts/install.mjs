@@ -31,17 +31,37 @@ const TARGETS = {
 
 const args = process.argv.slice(2);
 const has = (f) => args.includes(f);
-const FLAGS = ["--claude", "--codex", "--opencode", "--cursor", "--copy", "--dry-run", "--force", "--remove", "--help", "-h"];
+const FLAGS = ["--claude", "--codex", "--opencode", "--cursor", "--copy", "--dry-run", "--force", "--remove", "--version", "-v", "--help", "-h"];
 const unknown = args.filter((a) => !FLAGS.includes(a));
+
+function readVersion() {
+  try {
+    const pkg = JSON.parse(fs.readFileSync(path.join(SKILL_ROOT, "package.json"), "utf8"));
+    if (pkg.version) return pkg.version;
+  } catch {}
+  try {
+    const match = fs.readFileSync(path.join(SKILL_ROOT, "SKILL.md"), "utf8").match(/^version:\s*(\S+)/m);
+    if (match) return match[1];
+  } catch {}
+  return "unknown";
+}
+
+if (has("--version") || has("-v")) {
+  console.log(readVersion());
+  process.exit(0);
+}
+
 if (has("--help") || has("-h") || unknown.length) {
   if (unknown.length) console.log(`Unknown option: ${unknown.join(" ")}\n`);
-  console.log(`node install.mjs [--claude] [--codex] [--cursor] [--opencode] [--copy] [--dry-run] [--force] [--remove]
+  console.log(`hallmark [--claude] [--codex] [--cursor] [--opencode] [--copy] [--dry-run] [--force] [--remove]
+         npx hallmark-skill [options]
 
   Installs Hallmark for every harness it finds (or only the ones named), after checking every theme and reference.
   --dry-run  print what would be copied and change nothing
   --copy     give OpenCode its own copy instead of reading the Claude Code or Codex one
   --force    install even if the checks find a problem
-  --remove   delete every installed copy`);
+  --remove   delete every installed copy
+  --version  print the Hallmark version`);
   process.exit(unknown.length ? 2 : 0);
 }
 const DRY = has("--dry-run");

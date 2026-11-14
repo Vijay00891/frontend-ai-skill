@@ -27,13 +27,23 @@ The full operating manual is [`hallmark/SKILL.md`](hallmark/SKILL.md). The refer
 
 ## Install
 
-The installer validates the skill first, then writes it to the harnesses it finds. It does not install npm packages or touch project files.
+The installer validates the skill first, then writes it to the harnesses it finds. It does not add dependencies to your project or modify your project files.
+
+### From npm (no clone)
+
+The skill is packaged as [`hallmark-skill`](https://www.npmjs.com/package/hallmark-skill). Once the package is published, direct installation is:
 
 ```sh
-git clone https://github.com/Vijay00891/frontend-ai-skill.git
-cd frontend-ai-skill/hallmark
-node scripts/install.mjs --dry-run
-node scripts/install.mjs
+npx hallmark-skill --dry-run
+npx hallmark-skill
+```
+
+For a permanent command:
+
+```sh
+npm install -g hallmark-skill
+hallmark --dry-run
+hallmark
 ```
 
 `--dry-run` prints the destination and changes nothing. The real run writes:
@@ -47,10 +57,21 @@ node scripts/install.mjs
 OpenCode auto-discovers the Claude Code or Codex copy when one exists. To force an explicit OpenCode copy:
 
 ```sh
-node scripts/install.mjs --opencode --copy
+npx hallmark-skill --opencode --copy
 ```
 
 Pick targets explicitly with `--claude`, `--codex`, `--cursor` or `--opencode`. Use `--remove` to remove every installed copy. `--force` installs despite failed checks; only use it after reading the findings.
+
+### From source
+
+Use this when you want the examples or are working on the skill:
+
+```sh
+git clone https://github.com/Vijay00891/frontend-ai-skill.git
+cd frontend-ai-skill/hallmark
+node scripts/install.mjs --dry-run
+node scripts/install.mjs
+```
 
 If no harness is detected, name one explicitly. A manual install also works: copy the whole `hallmark/` folder into your harness's skills directory, keeping `SKILL.md` at its root.
 
@@ -79,6 +100,8 @@ The examples output plain HTML/CSS with a `tokens.css`, a `base.css`, a stamp in
 ```text
 hallmark/
   SKILL.md             the flow, the Floor, the gates and the hand-off
+  package.json         npm metadata and the `hallmark` command
+  README.md            npm install and use instructions
   references/          layout, craft, genres, imagery, niche, information forms,
                        21 macrostructures, 45 theme definitions and pictures, gates
   scripts/             theme deal/draw/scaffold/log, sloplint, capture, picture,
@@ -115,6 +138,7 @@ From the `hallmark/` folder:
 node scripts/refcheck.mjs
 node scripts/install.mjs --dry-run
 node --test scripts/*.test.mjs
+npm pack --dry-run
 ```
 
 The install dry run runs the same reference and theme checks as a real install. At publication the suite reports 10 passing tests, 0 failing and 11 optional browser regressions skipped. The browser tests activate when `HALLMARK_PUPPETEER` and `CHROME_PATH` (capture) or `HALLMARK_TEST_PUPPETEER` and `HALLMARK_TEST_CHROME` (render regressions) are set.
@@ -129,7 +153,7 @@ The static lint is dependency-free. `--render` needs Chrome or Chromium and `pup
 
 ## Requirements
 
-- **Node 18+** for the installer, theme tools, sloplint and checks. No npm install is needed for the static checks.
+- **Node 18+** for the installer, theme tools, sloplint and checks. The npm package needs no dependencies; the static checks need no project install either.
 - **A skills-capable harness**: Claude Code, Codex CLI, Cursor or OpenCode.
 - **Optional:** Chrome/Chromium and `puppeteer-core` for rendered screenshots and `--render`; `TOGETHER_API_KEY` for the optional comp/image step. The core design flow works without either.
 

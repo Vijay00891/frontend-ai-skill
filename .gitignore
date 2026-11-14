@@ -4,6 +4,9 @@
 # Installer temp directory
 *.tmp-install/
 
+# npm pack artifacts
+*.tgz
+
 # Node dependencies used only for optional browser/image tooling
 node_modules/
 

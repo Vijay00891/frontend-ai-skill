@@ -25,3 +25,5 @@ jobs:
         run: node scripts/install.mjs --claude --dry-run
       - name: Tests
         run: node --test scripts/*.test.mjs
+      - name: Package dry run
+        run: npm pack --dry-run
