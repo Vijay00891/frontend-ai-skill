@@ -1,0 +1,21 @@
+# Hallmark run artifacts and screenshots
+.hallmark/
+
+# Installer temp directory
+*.tmp-install/
+
+# Node dependencies used only for optional browser/image tooling
+node_modules/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# OS clutter
+.DS_Store
+Thumbs.db
+
+# Scratch files
+*.tmp
+*.log

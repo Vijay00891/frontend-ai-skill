@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wonder Lab · A lab you can walk through</title>
+  <meta name="description" content="Wonder Lab is a science club for ages 7 to 11. Five experiments, one Saturday at a time, in a room you can walk through.">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=chillax@500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav__in">
+      <a class="wordmark" href="#" aria-label="Wonder Lab home">
+        <span class="wordmark__mark" aria-hidden="true"></span>
+        Wonder Lab
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#experiments">Experiments</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="#book">Book a taster</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__head">
+          <h1 id="hero-title">A lab you can walk through.</h1>
+          <div class="hero__aside">
+            <p class="lead">A science club for ages 7 to 11.</p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#book">Book a taster</a>
+              <a class="btn" href="#experiments">See the experiments</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__map">
+          <div class="map-sheet">
+            <div class="map-sheet__body">
+              <div class="lab-map" role="group" aria-label="Lab map">
+                <span class="map__title">The lab, from above</span>
+                <svg class="lab-map__plan" viewBox="0 0 600 460" aria-hidden="true" focusable="false">
+                  <path class="room" d="M 40 8 H 560 Q 592 8 592 40 V 420 Q 592 452 560 452 H 340 M 260 452 H 40 Q 8 452 8 420 V 40 Q 8 8 40 8"/>
+                  <path class="window" d="M 190 8 V 18 M 300 8 V 18 M 190 13 H 300"/>
+                  <path class="door" d="M 260 452 A 80 80 0 0 1 340 452"/>
+                  <path class="route" d="M 300 440 C 200 420, 90 380, 90 260 C 90 160, 100 110, 150 101 C 220 60, 360 50, 438 92 C 500 130, 390 180, 300 221 C 220 255, 160 280, 120 340 C 180 400, 350 390, 450 331 C 510 300, 470 420, 300 440"/>
+                  <path class="route-progress" id="lab-progress" d="M 300 440 C 200 420, 90 380, 90 260 C 90 160, 100 110, 150 101 C 220 60, 360 50, 438 92 C 500 130, 390 180, 300 221 C 220 255, 160 280, 120 340 C 180 400, 350 390, 450 331 C 510 300, 470 420, 300 440" pathLength="100"/>
+                  <circle class="start-dot" cx="300" cy="440" r="9"/>
+                </svg>
+
+                <button class="station" data-station="light" style="--x:25%;--y:22%" aria-pressed="false" aria-label="Station 1, Light">
+                  <span class="station__num" aria-hidden="true">1</span>
+                  <span class="station__label">Light</span>
+                </button>
+                <button class="station" data-station="water" style="--x:73%;--y:20%" aria-pressed="false" aria-label="Station 2, Water">
+                  <span class="station__num" aria-hidden="true">2</span>
+                  <span class="station__label">Water</span>
+                </button>
+                <button class="station" data-station="air" style="--x:50%;--y:48%" aria-pressed="false" aria-label="Station 3, Air">
+                  <span class="station__num" aria-hidden="true">3</span>
+                  <span class="station__label">Air</span>
+                </button>
+                <button class="station" data-station="sound" style="--x:20%;--y:74%" aria-pressed="false" aria-label="Station 4, Sound">
+                  <span class="station__num" aria-hidden="true">4</span>
+                  <span class="station__label">Sound</span>
+                </button>
+                <button class="station" data-station="plants" style="--x:75%;--y:72%" aria-pressed="false" aria-label="Station 5, Plants">
+                  <span class="station__num" aria-hidden="true">5</span>
+                  <span class="station__label">Plants</span>
+                </button>
+                <span class="map__start" aria-hidden="true">Start here</span>
+              </div>
+              <div class="map__caption">
+                <span class="map__prompt">Pick a station.</span>
+                <span class="map__answer" aria-live="polite">Each one is a twenty-minute experiment.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experiments" id="experiments" aria-labelledby="experiments-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="experiments-title">Five experiments.</h2>
+          <div class="experiments__meta">
+            <p class="section-note">Twenty minutes each. Pick one.</p>
+            <p class="experiments__count" aria-live="polite"><span id="tried-count">0</span> of 5 tried</p>
+          </div>
+        </div>
+
+        <ol class="experiment-list">
+          <li class="experiment" data-station="light">
+            <span class="experiment__num" aria-hidden="true">01</span>
+            <div class="experiment__body">
+              <h3>Light</h3>
+              <p class="experiment__q">Can you bend a beam of <mark>light</mark>?</p>
+            </div>
+            <p class="experiment__need">Glass of water, torch.</p>
+            <button class="btn btn--small try" data-station="light" aria-pressed="false" aria-label="Mark Light as tried">I tried this</button>
+          </li>
+          <li class="experiment" data-station="water">
+            <span class="experiment__num" aria-hidden="true">02</span>
+            <div class="experiment__body">
+              <h3>Water</h3>
+              <p class="experiment__q">Which <mark>paper</mark> holds the most water?</p>
+            </div>
+            <p class="experiment__need">Two paper towels, cup.</p>
+            <button class="btn btn--small try" data-station="water" aria-pressed="false" aria-label="Mark Water as tried">I tried this</button>
+          </li>
+          <li class="experiment" data-station="air">
+            <span class="experiment__num" aria-hidden="true">03</span>
+            <div class="experiment__body">
+              <h3>Air</h3>
+              <p class="experiment__q">Can <mark>air</mark> hold up a book?</p>
+            </div>
+            <p class="experiment__need">Balloon, book.</p>
+            <button class="btn btn--small try" data-station="air" aria-pressed="false" aria-label="Mark Air as tried">I tried this</button>
+          </li>
+          <li class="experiment" data-station="sound">
+            <span class="experiment__num" aria-hidden="true">04</span>
+            <div class="experiment__body">
+              <h3>Sound</h3>
+              <p class="experiment__q">Can you see a <mark>sound</mark>?</p>
+            </div>
+            <p class="experiment__need">Bowl, cling film, rice.</p>
+            <button class="btn btn--small try" data-station="sound" aria-pressed="false" aria-label="Mark Sound as tried">I tried this</button>
+          </li>
+          <li class="experiment" data-station="plants">
+            <span class="experiment__num" aria-hidden="true">05</span>
+            <div class="experiment__body">
+              <h3>Plants</h3>
+              <p class="experiment__q">Do <mark>roots</mark> know which way is down?</p>
+            </div>
+            <p class="experiment__need">Bean, jar, paper towel.</p>
+            <button class="btn btn--small try" data-station="plants" aria-pressed="false" aria-label="Mark Plants as tried">I tried this</button>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="visit-title">Come and try.</h2>
+          <p class="section-note">Drop in, or come for a term.</p>
+        </div>
+
+        <div class="visit__grid">
+          <div class="visit__facts">
+            <table class="schedule">
+              <caption>When the lab is open</caption>
+              <tbody>
+                <tr><th scope="row">Saturdays</th><td>10:00 to 12:00</td></tr>
+                <tr><th scope="row">Ages</th><td>7 to 11</td></tr>
+                <tr><th scope="row">Where</th><td>The Old Dairy, 14 Mill Lane</td></tr>
+                <tr><th scope="row">Cost</th><td>£8 a session</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="visit__membership">
+            <h3>Ways to come</h3>
+            <ul class="membership">
+              <li><h4>Drop-in</h4><p>One Saturday. Pick any station.</p></li>
+              <li><h4>Term</h4><p>Ten Saturdays. One experiment a week.</p></li>
+              <li><h4>Family</h4><p>Two children, one grown-up free.</p></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="first-visit">
+          <h3>On your first visit.</h3>
+          <ol class="first-visit__steps">
+            <li>
+              <span class="first-visit__num" aria-hidden="true">1</span>
+              <h4>Come in</h4>
+              <p>A grown-up signs you in at the blue door.</p>
+            </li>
+            <li>
+              <span class="first-visit__num" aria-hidden="true">2</span>
+              <h4>Pick a station</h4>
+              <p>Start anywhere. The map is the room.</p>
+            </li>
+            <li>
+              <span class="first-visit__num" aria-hidden="true">3</span>
+              <h4>Try it</h4>
+              <p>Mark it on the map when you’re done.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="book" id="book" aria-labelledby="book-title">
+      <div class="container">
+        <div class="book-sheet">
+          <div class="book-sheet__body">
+            <div class="book__copy">
+              <h2 id="book-title">Book a taster.</h2>
+              <p>One Saturday. One experiment. One grown-up.</p>
+              <p class="book__note">We’ll reply with a time.</p>
+            </div>
+            <form class="book__form" action="#" method="post">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="age">Child’s age</label>
+                <input id="age" name="age" type="number" min="7" max="11" inputmode="numeric" required>
+              </div>
+              <div class="field field--email">
+                <label for="email">Grown-up’s email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <button class="btn btn--primary" type="submit">Book a taster</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <div class="footer__brand">
+        <a class="wordmark" href="#" aria-label="Wonder Lab home">
+          <span class="wordmark__mark" aria-hidden="true"></span>
+          Wonder Lab
+        </a>
+        <p>A science club for curious hands.</p>
+      </div>
+      <div class="footer__col">
+        <h3>Visit</h3>
+        <p>The Old Dairy<br>14 Mill Lane<br>Saturdays 10:00 to 12:00</p>
+      </div>
+      <div class="footer__col">
+        <h3>Contact</h3>
+        <p><a href="mailto:hello@wonderlab.example">hello@wonderlab.example</a></p>
+      </div>
+    </div>
+    <div class="container footer__legal">
+      <span>Wonder Lab is a demonstration club.</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const questions = {
+        light: 'Can you bend a beam of light?',
+        water: 'Which paper holds the most water?',
+        air: 'Can air hold up a book?',
+        sound: 'Can you see a sound?',
+        plants: 'Do roots know which way is down?'
+      };
+      const names = {
+        light: 'Light',
+        water: 'Water',
+        air: 'Air',
+        sound: 'Sound',
+        plants: 'Plants'
+      };
+      const stations = Array.from(document.querySelectorAll('.station'));
+      const tryButtons = Array.from(document.querySelectorAll('.try'));
+      const prompt = document.querySelector('.map__prompt');
+      const answer = document.querySelector('.map__answer');
+      const progress = document.getElementById('lab-progress');
+      const triedCount = document.getElementById('tried-count');
+      const tried = new Set();
+
+      function selectStation(station) {
+        stations.forEach((button) => {
+          const on = button === station;
+          button.classList.toggle('is-selected', on);
+          button.setAttribute('aria-pressed', String(on));
+        });
+        prompt.textContent = names[station.dataset.station] + '.';
+        answer.textContent = questions[station.dataset.station];
+      }
+
+      function updateTried() {
+        stations.forEach((station) => {
+          station.dataset.tried = String(tried.has(station.dataset.station));
+        });
+        tryButtons.forEach((button) => {
+          const on = tried.has(button.dataset.station);
+          button.setAttribute('aria-pressed', String(on));
+          button.classList.toggle('is-tried', on);
+          button.textContent = on ? 'Tried' : 'I tried this';
+          button.setAttribute('aria-label', on ? names[button.dataset.station] + ' tried' : 'Mark ' + names[button.dataset.station] + ' as tried');
+        });
+        if (progress) progress.style.strokeDashoffset = String(100 - (tried.size / 5) * 100);
+        if (triedCount) triedCount.textContent = String(tried.size);
+      }
+
+      stations.forEach((station) => {
+        station.addEventListener('click', () => selectStation(station));
+      });
+
+      tryButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          if (tried.has(button.dataset.station)) {
+            tried.delete(button.dataset.station);
+          } else {
+            tried.add(button.dataset.station);
+          }
+          updateTried();
+        });
+      });
+
+      updateTried();
+    })();
+  </script>
+</body>
+</html>

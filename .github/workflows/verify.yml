@@ -1,0 +1,27 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hallmark
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Reference check
+        run: node scripts/refcheck.mjs
+      - name: Installer dry run
+        run: node scripts/install.mjs --claude --dry-run
+      - name: Tests
+        run: node --test scripts/*.test.mjs

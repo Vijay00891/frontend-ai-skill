@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two Drums: a community press in Bay 4</title>
+  <meta name="description" content="Two Drums is a community letterpress and risograph studio. Bring a file, pull a proof in two drums, and book a press induction.">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="notice">
+    <div class="container notice__in">
+      <p>Open studio Thu 19 Nov, 6pm. Bay 4, Old Coop.</p>
+      <a href="#book">Book an induction</a>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="container nav__in">
+      <a class="wordmark" href="#top" aria-label="Two Drums home">
+        <span class="mark" aria-hidden="true"><span></span><span></span></span>
+        Two Drums
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#proof">The proof</a>
+        <a href="#job">Job sheet</a>
+        <a href="#paper">Paper</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <a class="nav__cta" href="#book">Book</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__in">
+        <h1 id="hero-title">Two drums, one <span class="misreg" data-text="sheet">sheet</span>.</h1>
+        <p class="lead">A community press where a file becomes a proof you can inspect.</p>
+        <div class="hero__actions">
+          <a class="link-strong" href="#book">Book a press induction</a>
+          <a class="link-quiet" href="#proof">Inspect the proof</a>
+        </div>
+        <p class="hero__note">Bay 4, Old Coop, Pollard Street. Open Tue to Thu, 10am to 9pm.</p>
+      </div>
+    </section>
+
+    <section class="proof-band grained" id="proof" aria-label="Sample proof">
+      <div class="container proof-toolbar">
+        <fieldset class="layer-switch">
+          <legend class="visually-hidden">Proof layer</legend>
+          <input type="radio" name="layer" id="layer-both" checked>
+          <label for="layer-both">Both drums</label>
+          <input type="radio" name="layer" id="layer-blue">
+          <label for="layer-blue">Blue</label>
+          <input type="radio" name="layer" id="layer-pink">
+          <label for="layer-pink">Pink</label>
+        </fieldset>
+        <p class="proof__hint">Three ways to read it.</p>
+      </div>
+
+      <figure class="proof-wrap">
+        <div class="proof" aria-hidden="true">
+          <div class="proof__sheet">
+            <div class="proof__top layer layer--blue">
+              <p>Open studio</p>
+              <p>Thu 19 Nov</p>
+            </div>
+            <p class="proof__title layer layer--blue">Open<br>Studio</p>
+            <div class="proof__circle layer layer--pink"></div>
+            <div class="proof__bar layer layer--pink"></div>
+            <p class="proof__body layer layer--blue">Two drums, one sheet.<br>Bring a file, leave with a proof.</p>
+            <p class="proof__foot layer layer--blue"><span>Bay 4, Old Coop, Pollard Street</span><span>R-2419. Ochre 120. Blue 265 and Pink 356.</span></p>
+            <span class="reg reg--tl"></span><span class="reg reg--tr"></span>
+            <span class="reg reg--bl"></span><span class="reg reg--br"></span>
+          </div>
+        </div>
+        <figcaption class="container proof__caption">Sample proof, pulled in two passes. The switch shows each drum; the purple is the overprint.</figcaption>
+      </figure>
+    </section>
+
+    <section class="layers section" aria-labelledby="layers-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="layers-title">A sheet is printed twice.</h2>
+          <p>The blue drum sets every word and rule. The pink drum fills every shape. Where they cross, the paper shows purple; nobody mixes it.</p>
+        </div>
+
+        <figure class="separations-figure">
+          <ol class="separations">
+            <li class="separation">
+              <div class="separation__head">
+                <span class="separation__num" aria-hidden="true">1</span>
+                <h3>Blue</h3>
+              </div>
+              <div class="separation__art plate--blue" aria-hidden="true">
+                <p class="plate__title">Open Studio</p>
+                <p class="plate__body">Two drums. One sheet.</p>
+                <span class="plate__circle"></span>
+                <span class="plate__bar"></span>
+              </div>
+              <p class="separation__caption">Words, rules, the date.</p>
+            </li>
+            <li class="separation">
+              <div class="separation__head">
+                <span class="separation__num" aria-hidden="true">2</span>
+                <h3>Pink</h3>
+              </div>
+              <div class="separation__art plate--pink" aria-hidden="true">
+                <p class="plate__title">Open Studio</p>
+                <p class="plate__body">Two drums. One sheet.</p>
+                <span class="plate__circle"></span>
+                <span class="plate__bar"></span>
+              </div>
+              <p class="separation__caption">Fills and fields.</p>
+            </li>
+            <li class="separation">
+              <div class="separation__head">
+                <span class="separation__num" aria-hidden="true">3</span>
+                <h3>Both</h3>
+              </div>
+              <div class="separation__art plate--both" aria-hidden="true">
+                <p class="plate__title">Open Studio</p>
+                <p class="plate__body">Two drums. One sheet.</p>
+                <span class="plate__circle"></span>
+                <span class="plate__bar"></span>
+              </div>
+              <p class="separation__caption">The overprint.</p>
+            </li>
+          </ol>
+          <figcaption class="visually-hidden">The same sheet printed in two passes: blue first, pink second; the purple is where they overlap.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="job section section--ruled grained" id="job" aria-labelledby="job-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="job-title">The sheet travels with the job.</h2>
+          <p>Every job gets a number, a stock, two inks and a set of stamps. The stamps are the states; the sheet proves the work.</p>
+        </div>
+
+        <div class="jobsheet" role="group" aria-label="Sample job sheet R-2419">
+          <div class="jobsheet__head">
+            <p class="jobsheet__brand">Two Drums</p>
+            <p class="jobsheet__no">R-2419</p>
+          </div>
+          <div class="jobsheet__grid">
+            <dl class="jobsheet__fields">
+              <div><dt>Job</dt><dd>Open studio poster</dd></div>
+              <div><dt>Stock</dt><dd>Ochre 120</dd></div>
+              <div><dt>Size</dt><dd>A3, 297 x 420mm</dd></div>
+              <div><dt>Inks</dt><dd>Blue 265, Pink 356</dd></div>
+              <div><dt>Quantity</dt><dd class="num">40</dd></div>
+              <div><dt>Due</dt><dd>Thu 26 Nov</dd></div>
+            </dl>
+            <div class="jobsheet__states">
+              <p class="jobsheet__states-title">Stamps</p>
+              <ol class="stamps">
+                <li class="stamp is-done"><span>File checked</span><span>Mon</span></li>
+                <li class="stamp is-done"><span>Plates made</span><span>Tue</span></li>
+                <li class="stamp is-current" aria-current="step"><span>Blue pulled</span><span>Wed</span></li>
+                <li class="stamp"><span>Pink pulled</span><span>Next</span></li>
+                <li class="stamp"><span>Dry</span><span>Thu</span></li>
+                <li class="stamp"><span>Trim</span><span>Thu</span></li>
+              </ol>
+            </div>
+          </div>
+          <p class="jobsheet__note">Sample job sheet. The studio’s open-day poster, not a client’s.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper section section--ruled" id="paper" aria-labelledby="paper-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="paper-title">What is on the shelf.</h2>
+          <p>Three stocks, two drums. The paper holds the ink.</p>
+        </div>
+
+        <div class="paper__grid">
+          <table class="stock">
+            <caption class="visually-hidden">Stocks kept in the studio</caption>
+            <thead>
+              <tr>
+                <th scope="col">Stock</th>
+                <th scope="col">Weight</th>
+                <th scope="col">Surface</th>
+                <th scope="col">Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Ochre 120</th>
+                <td class="num" data-label="Weight">120gsm</td>
+                <td data-label="Surface">Uncoated</td>
+                <td data-label="Use">Posters</td>
+              </tr>
+              <tr>
+                <th scope="row">News 90</th>
+                <td class="num" data-label="Weight">90gsm</td>
+                <td data-label="Surface">Machine</td>
+                <td data-label="Use">Zines</td>
+              </tr>
+              <tr>
+                <th scope="row">Cotton 160</th>
+                <td class="num" data-label="Weight">160gsm</td>
+                <td data-label="Surface">Textured</td>
+                <td data-label="Use">Covers</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="inks">
+            <div class="ink">
+              <span class="ink__chip ink__chip--blue" aria-hidden="true"></span>
+              <p>Blue 265<br><span>Words and rules</span></p>
+            </div>
+            <div class="ink">
+              <span class="ink__chip ink__chip--pink" aria-hidden="true"></span>
+              <p>Pink 356<br><span>Fills and fields</span></p>
+            </div>
+            <p class="inks__note">The third colour is the overprint.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit section section--ruled" id="visit" aria-labelledby="visit-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="visit-title">Open studio.</h2>
+          <p>See the drums before you book. Bring a file, or send it ahead.</p>
+        </div>
+
+        <div class="visit__grid">
+          <div class="hours">
+            <h3>Hours</h3>
+            <dl>
+              <div><dt>Tue to Thu</dt><dd>10am to 9pm</dd></div>
+              <div><dt>Sat</dt><dd>10am to 4pm</dd></div>
+              <div><dt>Sun and Mon</dt><dd>Closed</dd></div>
+            </dl>
+          </div>
+          <div class="where">
+            <h3>Find us</h3>
+            <p>Bay 4, Old Coop<br>Pollard Street<br>Open studio: Thu 19 Nov, 6pm</p>
+            <a class="link-strong" href="#book">Book a press induction</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="book section grained" id="book" aria-labelledby="book-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="book-title">Book a press induction.</h2>
+          <p>One evening, two drums, a stack of stock. Leave with a proof and a file set up for a run.</p>
+        </div>
+
+        <form class="book__form" id="book-form" action="#book" method="get">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field field--wide">
+            <label for="project">What do you want to print?</label>
+            <input id="project" name="project" type="text" placeholder="A poster, a zine, a cover" required>
+          </div>
+          <div class="field">
+            <label for="experience">Press experience</label>
+            <select id="experience" name="experience">
+              <option>First time</option>
+              <option>Some</option>
+              <option>Experienced</option>
+            </select>
+          </div>
+          <div class="book__submit">
+            <button class="btn" type="submit">Request a slot</button>
+            <p class="book__note">Inductions are free; you pay for paper. This demo does not send or book anything.</p>
+          </div>
+          <p class="book__status" id="book-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <div class="footer__brand">
+        <a class="wordmark" href="#top" aria-label="Two Drums home">
+          <span class="mark" aria-hidden="true"><span></span><span></span></span>
+          Two Drums
+        </a>
+        <p>Bay 4, Old Coop<br>Pollard Street</p>
+      </div>
+      <nav class="footer__col" aria-label="Studio">
+        <h3>Studio</h3>
+        <a href="#proof">The proof</a>
+        <a href="#job">Job sheet</a>
+        <a href="#paper">Paper</a>
+      </nav>
+      <nav class="footer__col" aria-label="Visit">
+        <h3>Visit</h3>
+        <a href="#visit">Hours</a>
+        <a href="#book">Book an induction</a>
+        <a href="mailto:hello@twodrums.example">Email the studio</a>
+      </nav>
+      <p class="footer__note">A fictional studio, built as a Hallmark demonstration. No real bookings or claims; paper and ink names are samples.</p>
+    </div>
+  </footer>
+
+  <div class="stickybar" id="stickybar" hidden>
+    <div class="container stickybar__in">
+      <p>Next induction: this Thursday.</p>
+      <a href="#book">Book a slot</a>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('nav');
+    let lastY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      nav.classList.toggle('nav--retracted', y > lastY && y > 240);
+      lastY = y;
+    }, { passive: true });
+    nav.addEventListener('focusin', () => nav.classList.remove('nav--retracted'));
+
+    const bar = document.getElementById('stickybar');
+    const hero = document.getElementById('top');
+    const book = document.getElementById('book');
+    let heroVisible = true;
+    let bookVisible = false;
+    const updateBar = () => { bar.hidden = heroVisible || bookVisible; };
+    new IntersectionObserver(([entry]) => {
+      heroVisible = entry.isIntersecting;
+      updateBar();
+    }, { threshold: 0 }).observe(hero);
+    new IntersectionObserver(([entry]) => {
+      bookVisible = entry.isIntersecting;
+      updateBar();
+    }, { threshold: 0 }).observe(book);
+    updateBar();
+
+    const form = document.getElementById('book-form');
+    const status = document.getElementById('book-status');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      status.textContent = 'Request noted. This is a demo, so nothing was sent.';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

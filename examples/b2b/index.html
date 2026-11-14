@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wayfind · Every shipment, on one board</title>
+  <meta name="description" content="Wayfind is a sample freight visibility board: one shared view of every booking, event and exception, from booking to proof of delivery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="container nav__in">
+      <a class="wordmark" href="#" aria-label="Wayfind home">
+        <span class="wordmark__mark" aria-hidden="true"></span>Wayfind
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#network">Network</a>
+        <a href="#journey">Journey</a>
+        <a href="#board">Board</a>
+        <a href="#service">Service</a>
+      </nav>
+      <a class="btn nav__cta" href="#try">Try the board</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <h1 id="hero-title">Every shipment, on one board.</h1>
+
+        <div class="hero__lead">
+          <p class="lead">One shared view from booking to proof of delivery.</p>
+          <form class="track" action="#journey" method="get" novalidate>
+            <label class="visually-hidden" for="ref">Shipment reference</label>
+            <div class="track__row">
+              <input class="track__input" id="ref" name="ref" type="text" value="WF-2481" placeholder="Shipment reference" autocomplete="off" spellcheck="false" aria-describedby="track-note">
+              <button class="btn btn--primary" type="submit">Track</button>
+            </div>
+            <p class="track__note" id="track-note">Sample data. Try WF-2481.</p>
+            <p class="track__error" id="track-error" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="hero__plate plate" aria-label="Sample shipment">
+          <div class="plate__title"><span class="live-dot" aria-hidden="true"></span>Sample shipment</div>
+          <div class="plate__ref" data-bind="ref">WF-2481</div>
+          <div class="plate__lane" data-bind="laneShort">Felixstowe → Newark</div>
+          <div class="plate__eta"><span>ETA</span> <strong class="figure figure--amber" data-bind="eta">22 Nov</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="band band--ink network" id="network" aria-labelledby="network-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="network-title">The network, at a glance.</h2>
+          <p class="section-note">Sample lanes. One selected route.</p>
+        </div>
+
+        <div class="network__grid">
+          <figure class="network__figure">
+            <div class="map-frame">
+              <svg class="map" viewBox="0 0 760 420" role="img" aria-labelledby="map-title map-desc">
+                <title id="map-title">Sample network: seven hubs</title>
+                <desc id="map-desc">A schematic network with hubs at Felixstowe, Rotterdam, Hamburg, Newark, Montreal, Lagos and Singapore. The selected shipment WF-2481 travels Felixstowe to Rotterdam to Newark.</desc>
+                <g class="map__lanes" aria-hidden="true">
+                  <path class="lane is-active" data-segment="felixstowe-rotterdam" d="M120 140 L150 190"/>
+                  <path class="lane is-active" data-segment="rotterdam-newark" d="M150 190 C 300 110, 450 110, 600 150"/>
+                  <path class="lane" data-segment="rotterdam-lagos" d="M150 190 C 230 260, 290 305, 350 330"/>
+                  <path class="lane" data-segment="hamburg-singapore" d="M210 150 C 380 220, 520 300, 650 330"/>
+                  <path class="lane" data-segment="rotterdam-montreal" d="M150 190 C 300 40, 440 45, 560 90"/>
+                  <path class="lane" data-segment="hamburg-newark" d="M210 150 C 350 80, 480 90, 600 150"/>
+                </g>
+                <g class="map__nodes">
+                  <g class="node is-active" data-node="felixstowe" transform="translate(120 140)">
+                    <rect x="-5" y="-5" width="10" height="10"/>
+                    <text x="12" y="5">Felixstowe</text>
+                  </g>
+                  <g class="node is-active" data-node="rotterdam" transform="translate(150 190)">
+                    <rect x="-5" y="-5" width="10" height="10"/>
+                    <text x="12" y="5">Rotterdam</text>
+                  </g>
+                  <g class="node" data-node="hamburg" transform="translate(210 150)">
+                    <rect x="-5" y="-5" width="10" height="10"/>
+                    <text x="12" y="-8">Hamburg</text>
+                  </g>
+                  <g class="node is-active" data-node="newark" transform="translate(600 150)">
+                    <rect x="-5" y="-5" width="10" height="10"/>
+                    <text x="12" y="5">Newark</text>
+                  </g>
+                  <g class="node" data-node="montreal" transform="translate(560 90)">
+                    <rect x="-5" y="-5" width="10" height="10"/>
+                    <text x="12" y="5">Montreal</text>
+                  </g>
+                  <g class="node" data-node="lagos" transform="translate(350 330)">
+                    <rect x="-5" y="-5" width="10" height="10"/>
+                    <text x="12" y="5">Lagos</text>
+                  </g>
+                  <g class="node" data-node="singapore" transform="translate(650 330)">
+                    <rect x="-5" y="-5" width="10" height="10"/>
+                    <text x="12" y="5">Singapore</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <figcaption>Sample network: 7 hubs, 6 lanes.</figcaption>
+            <ul class="map__key" aria-label="Map key">
+              <li><span class="key__swatch key__swatch--route" aria-hidden="true"></span>Selected route</li>
+              <li><span class="key__swatch key__swatch--lane" aria-hidden="true"></span>Sample lane</li>
+              <li><span class="key__swatch key__swatch--node" aria-hidden="true"></span>Hub</li>
+            </ul>
+          </figure>
+
+          <aside class="network__plate plate" aria-label="Selected route">
+            <div class="plate__title"><span class="live-dot" aria-hidden="true"></span>Selected route</div>
+            <div class="plate__ref" data-bind="ref">WF-2481</div>
+            <div class="plate__lane" data-bind="lane">Felixstowe → Rotterdam → Newark</div>
+            <dl class="plate__facts">
+              <dt>Status</dt>
+              <dd data-bind="status">In transit</dd>
+              <dt>ETA</dt>
+              <dd class="figure figure--amber" data-bind="eta">22 Nov</dd>
+            </dl>
+            <p class="plate__note">The map follows the board.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="journey-title">Follow one box.</h2>
+          <p class="section-note">Sample events for <span data-bind="ref">WF-2481</span>.</p>
+        </div>
+
+        <div class="journey__grid">
+          <div class="timeline">
+            <ol class="timeline__list" id="timeline" aria-live="polite">
+              <li class="event is-done"><span class="event__time">11 Nov · 09:14</span><span class="event__body"><span class="event__label">Booked</span><span class="event__place">Felixstowe</span></span></li>
+              <li class="event is-done"><span class="event__time">11 Nov · 14:02</span><span class="event__body"><span class="event__label">Collected</span><span class="event__place">Felixstowe</span></span></li>
+              <li class="event is-done"><span class="event__time">12 Nov · 06:40</span><span class="event__body"><span class="event__label">Loaded</span><span class="event__place">Felixstowe</span></span></li>
+              <li class="event is-done"><span class="event__time">12 Nov · 18:20</span><span class="event__body"><span class="event__label">Departed</span><span class="event__place">Felixstowe</span></span></li>
+              <li class="event is-done"><span class="event__time">13 Nov · 07:05</span><span class="event__body"><span class="event__label">Arrived</span><span class="event__place">Rotterdam</span></span></li>
+              <li class="event is-done"><span class="event__time">13 Nov · 11:30</span><span class="event__body"><span class="event__label">Customs cleared</span><span class="event__place">Rotterdam</span></span></li>
+              <li class="event is-current" aria-current="step"><span class="event__time">14 Nov · 03:20</span><span class="event__body"><span class="event__label">Departed</span><span class="event__place">Rotterdam</span></span></li>
+              <li class="event is-next"><span class="event__time">22 Nov · 08:00</span><span class="event__body"><span class="event__label">ETA</span><span class="event__place">Newark</span></span></li>
+            </ol>
+          </div>
+
+          <aside class="facts" aria-label="Shipment facts">
+            <h3 class="facts__ref" data-bind="ref">WF-2481</h3>
+            <dl class="facts__list">
+              <div><dt>Lane</dt><dd data-bind="lane">Felixstowe → Rotterdam → Newark</dd></div>
+              <div><dt>Status</dt><dd data-bind="status">In transit</dd></div>
+              <div><dt>ETA</dt><dd data-bind="eta">22 Nov</dd></div>
+              <div><dt>Vessel / voyage</dt><dd data-bind="vessel">MV Meridian / 084W</dd></div>
+              <div><dt>Container</dt><dd data-bind="container">MSKU 482 119 3</dd></div>
+              <div><dt>Exception</dt><dd data-bind="exception">None</dd></div>
+            </dl>
+            <p class="facts__note">Sample data. Every reference on the board has a journey.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--ink board" id="board" aria-labelledby="board-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="board-title">Every lane, one board.</h2>
+          <p class="section-note">Sample data · 14 Nov 2026.</p>
+        </div>
+
+        <div class="board__wrap">
+          <table class="board__table">
+            <caption>Sample shipments. Select a reference.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Reference</th>
+                <th scope="col">Lane</th>
+                <th scope="col">ETA</th>
+                <th scope="col">Status</th>
+                <th scope="col">Exception</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-selected" data-ref="WF-2481">
+                <th scope="row"><a class="board__ref" href="#journey" data-ref="WF-2481" aria-current="true"><span class="live-dot" aria-hidden="true"></span>WF-2481</a></th>
+                <td data-label="Lane">Felixstowe → Newark</td>
+                <td class="figure figure--amber" data-label="ETA">22 Nov</td>
+                <td data-label="Status">In transit</td>
+                <td data-label="Exception">None</td>
+              </tr>
+              <tr data-ref="WF-2476">
+                <th scope="row"><a class="board__ref" href="#journey" data-ref="WF-2476"><span class="live-dot" aria-hidden="true"></span>WF-2476</a></th>
+                <td data-label="Lane">Rotterdam → Lagos</td>
+                <td class="figure figure--amber" data-label="ETA">19 Nov</td>
+                <td data-label="Status">Customs</td>
+                <td data-label="Exception">Held</td>
+              </tr>
+              <tr data-ref="WF-2469">
+                <th scope="row"><a class="board__ref" href="#journey" data-ref="WF-2469"><span class="live-dot" aria-hidden="true"></span>WF-2469</a></th>
+                <td data-label="Lane">Hamburg → Singapore</td>
+                <td class="figure figure--amber" data-label="ETA">28 Nov</td>
+                <td data-label="Status">In transit</td>
+                <td data-label="Exception">None</td>
+              </tr>
+              <tr data-ref="WF-2458">
+                <th scope="row"><a class="board__ref" href="#journey" data-ref="WF-2458"><span class="live-dot" aria-hidden="true"></span>WF-2458</a></th>
+                <td data-label="Lane">Rotterdam → Montreal</td>
+                <td class="figure figure--amber" data-label="ETA">24 Nov</td>
+                <td data-label="Status">Delayed</td>
+                <td data-label="Exception">Rolled</td>
+              </tr>
+              <tr data-ref="WF-2441">
+                <th scope="row"><a class="board__ref" href="#journey" data-ref="WF-2441"><span class="live-dot" aria-hidden="true"></span>WF-2441</a></th>
+                <td data-label="Lane">Hamburg → Newark</td>
+                <td class="figure figure--amber" data-label="ETA">12 Nov</td>
+                <td data-label="Status">Delivered</td>
+                <td data-label="Exception">None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="board__note">Sample board, no live data.</p>
+      </div>
+    </section>
+
+    <section class="service" id="service" aria-labelledby="service-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="service-title">From booking to proof.</h2>
+          <p class="section-note">What the board covers.</p>
+        </div>
+
+        <div class="service__grid">
+          <table class="spec">
+            <caption>Coverage</caption>
+            <tbody>
+              <tr><th scope="row">Modes</th><td>Ocean, air and road</td></tr>
+              <tr><th scope="row">Events</th><td>Booking to proof of delivery</td></tr>
+              <tr><th scope="row">Exceptions</th><td>Rolled, held, late</td></tr>
+              <tr><th scope="row">Sources</th><td>Forwarder, ERP, CSV, API</td></tr>
+              <tr><th scope="row">Access</th><td>Role-based, per lane</td></tr>
+              <tr><th scope="row">Exports</th><td>CSV and API</td></tr>
+            </tbody>
+          </table>
+
+          <aside class="sources">
+            <h3>Bring your own sources.</h3>
+            <p>Connect a forwarder, an ERP or a CSV.</p>
+            <ul class="chips">
+              <li>Forwarder</li>
+              <li>ERP</li>
+              <li>CSV</li>
+              <li>API</li>
+            </ul>
+          </aside>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <h3><span class="step__num" aria-hidden="true">01</span> Connect</h3>
+            <p>Send bookings and events from your systems.</p>
+          </li>
+          <li class="step">
+            <h3><span class="step__num" aria-hidden="true">02</span> Trace</h3>
+            <p>Follow every lane on one board.</p>
+          </li>
+          <li class="step">
+            <h3><span class="step__num" aria-hidden="true">03</span> Act</h3>
+            <p>Flag the exception before the customer calls.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="try" id="try" aria-labelledby="try-title">
+      <div class="container try__grid">
+        <div class="try__copy">
+          <h2 id="try-title">Try the board.</h2>
+          <p class="lead">A sample lane, a live timeline and the full event history.</p>
+          <p class="try__note">Demo form. No email is sent.</p>
+        </div>
+
+        <form class="demo" action="#" method="post">
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" autocomplete="organization" required>
+          </div>
+          <button class="btn btn--primary" type="submit">Send the demo</button>
+          <p class="demo__status" id="demo-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__mast">
+        <p class="footer__wordmark">Wayfind</p>
+        <p class="footer__tag">One board for the whole journey.</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#network">Network</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#board">Board</a></li>
+            <li><a href="#service">Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Demo</h3>
+          <ul>
+            <li><a href="#board">Sample board</a></li>
+            <li><a href="#try">Try the board</a></li>
+            <li><a href="#service">How it works</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:demo@wayfind.example">demo@wayfind.example</a></li>
+            <li><span>Sample page, 2026.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__legal">Wayfind is a demonstration product page. Sample shipments, lanes and events are fictional. © 2026 Wayfind.</p>
+    </div>
+  </footer>
+
+  <script>
+    const shipments = {
+      "WF-2481": {
+        ref: "WF-2481",
+        lane: "Felixstowe → Rotterdam → Newark",
+        laneShort: "Felixstowe → Newark",
+        status: "In transit",
+        eta: "22 Nov",
+        vessel: "MV Meridian / 084W",
+        container: "MSKU 482 119 3",
+        exception: "None",
+        path: ["felixstowe", "rotterdam", "newark"],
+        segments: ["felixstowe-rotterdam", "rotterdam-newark"],
+        events: [
+          ["11 Nov · 09:14", "Booked", "Felixstowe", "done"],
+          ["11 Nov · 14:02", "Collected", "Felixstowe", "done"],
+          ["12 Nov · 06:40", "Loaded", "Felixstowe", "done"],
+          ["12 Nov · 18:20", "Departed", "Felixstowe", "done"],
+          ["13 Nov · 07:05", "Arrived", "Rotterdam", "done"],
+          ["13 Nov · 11:30", "Customs cleared", "Rotterdam", "done"],
+          ["14 Nov · 03:20", "Departed", "Rotterdam", "current"],
+          ["22 Nov · 08:00", "ETA", "Newark", "next"]
+        ]
+      },
+      "WF-2476": {
+        ref: "WF-2476",
+        lane: "Rotterdam → Lagos",
+        laneShort: "Rotterdam → Lagos",
+        status: "Customs",
+        eta: "19 Nov",
+        vessel: "MV Atlantic / 031E",
+        container: "TCLU 771 220 8",
+        exception: "Held",
+        path: ["rotterdam", "lagos"],
+        segments: ["rotterdam-lagos"],
+        events: [
+          ["08 Nov · 10:05", "Booked", "Rotterdam", "done"],
+          ["08 Nov · 15:40", "Collected", "Rotterdam", "done"],
+          ["09 Nov · 04:10", "Departed", "Rotterdam", "done"],
+          ["13 Nov · 18:55", "Arrived", "Lagos", "done"],
+          ["14 Nov · 08:20", "Customs held", "Lagos", "current"],
+          ["19 Nov · 12:00", "ETA cleared", "Lagos", "next"]
+        ]
+      },
+      "WF-2469": {
+        ref: "WF-2469",
+        lane: "Hamburg → Singapore",
+        laneShort: "Hamburg → Singapore",
+        status: "In transit",
+        eta: "28 Nov",
+        vessel: "MV Eastern Star / 122E",
+        container: "HLXU 903 441 2",
+        exception: "None",
+        path: ["hamburg", "singapore"],
+        segments: ["hamburg-singapore"],
+        events: [
+          ["06 Nov · 09:30", "Booked", "Hamburg", "done"],
+          ["07 Nov · 11:15", "Collected", "Hamburg", "done"],
+          ["08 Nov · 06:00", "Departed", "Hamburg", "done"],
+          ["14 Nov · 03:00", "In transit", "At sea", "current"],
+          ["28 Nov · 09:00", "ETA", "Singapore", "next"]
+        ]
+      },
+      "WF-2458": {
+        ref: "WF-2458",
+        lane: "Rotterdam → Montreal",
+        laneShort: "Rotterdam → Montreal",
+        status: "Delayed",
+        eta: "24 Nov",
+        vessel: "MV Laurentian / 019W",
+        container: "CMAU 220 908 1",
+        exception: "Rolled",
+        path: ["rotterdam", "montreal"],
+        segments: ["rotterdam-montreal"],
+        events: [
+          ["02 Nov · 12:10", "Booked", "Rotterdam", "done"],
+          ["03 Nov · 08:45", "Collected", "Rotterdam", "done"],
+          ["05 Nov · 16:20", "Rolled", "Rotterdam", "done"],
+          ["12 Nov · 07:30", "Loaded", "Rotterdam", "done"],
+          ["13 Nov · 21:10", "Departed", "Rotterdam", "current"],
+          ["24 Nov · 10:00", "ETA", "Montreal", "next"]
+        ]
+      },
+      "WF-2441": {
+        ref: "WF-2441",
+        lane: "Hamburg → Newark",
+        laneShort: "Hamburg → Newark",
+        status: "Delivered",
+        eta: "12 Nov",
+        vessel: "MV Hudson / 044W",
+        container: "MSCU 118 204 5",
+        exception: "None",
+        path: ["hamburg", "newark"],
+        segments: ["hamburg-newark"],
+        events: [
+          ["28 Oct · 09:00", "Booked", "Hamburg", "done"],
+          ["29 Oct · 13:20", "Collected", "Hamburg", "done"],
+          ["30 Oct · 05:40", "Departed", "Hamburg", "done"],
+          ["10 Nov · 22:15", "Arrived", "Newark", "done"],
+          ["12 Nov · 09:05", "Delivered", "Newark", "current"]
+        ]
+      }
+    };
+
+    const timeline = document.querySelector("#timeline");
+    const mapDesc = document.querySelector("#map-desc");
+    const error = document.querySelector("#track-error");
+
+    function selectShipment(ref, jump) {
+      const s = shipments[ref];
+      if (!s) return false;
+
+      document.querySelectorAll("[data-bind]").forEach((el) => {
+        el.textContent = s[el.dataset.bind];
+      });
+
+      document.querySelectorAll(".board__table tbody tr").forEach((row) => {
+        const on = row.dataset.ref === ref;
+        row.classList.toggle("is-selected", on);
+        const link = row.querySelector(".board__ref");
+        if (link) {
+          if (on) link.setAttribute("aria-current", "true");
+          else link.removeAttribute("aria-current");
+        }
+      });
+
+      timeline.innerHTML = s.events.map(([time, label, place, state]) =>
+        `<li class="event is-${state}"${state === "current" ? ' aria-current="step"' : ""}>` +
+          `<span class="event__time">${time}</span>` +
+          `<span class="event__body"><span class="event__label">${label}</span>` +
+          `<span class="event__place">${place}</span></span>` +
+        `</li>`
+      ).join("");
+
+      const nodes = new Set(s.path);
+      document.querySelectorAll(".node").forEach((node) => {
+        node.classList.toggle("is-active", nodes.has(node.dataset.node));
+      });
+      document.querySelectorAll(".lane").forEach((lane) => {
+        lane.classList.toggle("is-active", s.segments.includes(lane.dataset.segment));
+      });
+
+      if (mapDesc) {
+        mapDesc.textContent = `A schematic network with hubs at Felixstowe, Rotterdam, Hamburg, Newark, Montreal, Lagos and Singapore. The selected shipment ${s.ref} travels ${s.lane.replaceAll(" → ", " to ")}.`;
+      }
+
+      document.querySelectorAll(".live-dot").forEach((dot) => {
+        dot.classList.remove("is-updating");
+        void dot.offsetWidth;
+        dot.classList.add("is-updating");
+      });
+
+      const input = document.querySelector("#ref");
+      if (input) input.value = s.ref;
+      error.textContent = "";
+
+      if (jump) document.querySelector("#journey").scrollIntoView({ behavior: "auto", block: "start" });
+      return true;
+    }
+
+    document.querySelectorAll(".board__ref").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        selectShipment(link.dataset.ref, true);
+      });
+    });
+
+    document.querySelector(".track").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const ref = document.querySelector("#ref").value.trim().toUpperCase();
+      if (!shipments[ref]) {
+        error.textContent = "No sample with that reference. Try WF-2481.";
+        document.querySelector("#ref").focus();
+        return;
+      }
+      selectShipment(ref, true);
+    });
+
+    document.querySelector(".demo").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.querySelector("#demo-status").textContent = "Demo only. No email is sent.";
+    });
+  </script>
+</body>
+</html>
