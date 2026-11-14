@@ -19,7 +19,7 @@ Most generated frontends converge: the same purple gradient, three floating card
 - **A hard Floor.** Sixteen non-waivable rules cover tokens, motion, focus, overflow, fold, labels, honesty and the page stamp. A page that fails the Floor is not Hallmark.
 - **One ask.** Material, audience, use and tone arrive in one message. If you say "go ahead", the skill infers and states what it picked; it never invents a fact.
 - **A dealt direction.** Forty-five material themes (paper, ink, faces, surfaces, motion, voice) are dealt against a log so consecutive builds do not repeat. The theme sets the material; it never sets the page's content or order.
-- **An idea from the content.** The skill names the content's shape, sketches three mechanisms — comparison, spatial, narrative, transformation, artifact, simulation — and builds the one that fits and is furthest from the last three runs.
+- **An idea from the content.** The skill names the content's shape, sketches three mechanisms from six options — comparison, spatial, narrative, transformation, artifact, simulation — and builds the one that fits and is furthest from the last three runs.
 - **A sweep, not a vibe.** `sloplint` checks the page, the gates are walked, a fresh-context finish review asks whether the page actually shows the idea it claims, and the Picks block reports the outcome.
 - **Honest proof.** No invented metrics, quotes, logos or case-study counts. Missing material is named as absent, or replaced with a library stand-in that the user can swap.
 
