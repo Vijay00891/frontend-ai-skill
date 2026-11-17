@@ -4,13 +4,15 @@
 
 [![verify](https://github.com/Vijay00891/frontend-ai-skill/actions/workflows/verify.yml/badge.svg)](https://github.com/Vijay00891/frontend-ai-skill/actions/workflows/verify.yml)
 
-![Four PowerUI proof pages](examples/proofs-grid.png)
+![Four inherited proof pages](examples/proofs-grid.png)
 
-<sub>Four proof pages built with PowerUI v2.1.0. All brands, copy and data are fictional.</sub>
+<sub>Four proof pages inherited from Hallmark, included with PowerUI v2.2.0. All brands, copy and data are fictional.</sub>
 
 PowerUI installs a design process into Claude Code, Codex, Cursor or OpenCode. It is not a component library. It asks once, reads the project, chooses a direction, builds one clear idea, and sweeps the result against a measurable floor.
 
-`2.1.0` | MIT | Node 18+ | [npm](https://www.npmjs.com/package/powerui-skill) | [examples](examples/) | [skill](powerui/SKILL.md)
+The normal workflow is one command: install once, then ask for a page with `/powerui <prompt>`. The agent runs project fit, build, checks, fixes and the proof report internally. You do not run a second command to test, screenshot or export the result.
+
+`2.2.0` | MIT | Node 18+ | [npm](https://www.npmjs.com/package/powerui-skill) | [examples](examples/) | [skill](powerui/SKILL.md)
 
 ## Quick start
 
@@ -22,7 +24,7 @@ PowerUI installs a design process into Claude Code, Codex, Cursor or OpenCode. I
    npx powerui-skill
    ```
 
-   The first command only prints what would happen. The second installs PowerUI into every supported harness it detects.
+   The first command only prints what would happen. The second installs PowerUI into every supported harness it detects. After that, the only step is the prompt below.
 
 3. Ask PowerUI for a page:
 
@@ -35,7 +37,7 @@ PowerUI installs a design process into Claude Code, Codex, Cursor or OpenCode. I
 
    Natural language also works: *"Use the PowerUI skill to design a booking page for a neighborhood print studio."*
 
-The npm package is named `powerui-skill`. The installed command is `powerui`.
+The npm package is named `powerui-skill`. Its installer command is `powerui`. The skill itself needs no other public command: it scans the project, builds, checks and reports inside the `/powerui` run.
 
 ## Install
 
@@ -144,11 +146,9 @@ It then shows a compact **Picks** block and builds. If you say **go ahead**, it 
 
 The examples produce plain HTML and CSS with a `tokens.css`, a `base.css`, and a PowerUI stamp at the top of the stylesheet. In a framework project, PowerUI reuses the project's tokens and appends to its stylesheet instead.
 
-The skill sweeps the page with `sloplint`, checks the gates, and reports the outcome. If the page is not clean, ask PowerUI to fix the findings. For a manual sweep from the `powerui/` folder:
+PowerUI writes `.powerui/contract.json` when it scans a project, and `.powerui/proof.json` plus a readable proof summary after the sweep. The final message reports what was built, the proof verdict, which checks ran or were skipped, and any unresolved finding with its file and line.
 
-```sh
-node scripts/sloplint.mjs path/to/index.html --genre editorial --render
-```
+You do not need to run the sweep yourself. If the page is not clean, ask PowerUI to fix the findings; it reruns the proof. The proof report is evidence, not a waiver: a skipped render or a remaining warning is reported as skipped or warned.
 
 ### 4. Update or remove
 
@@ -183,9 +183,10 @@ Most generated frontends converge: the same purple gradient, three floating card
 
 - **A hard Floor.** Sixteen non-waivable rules cover tokens, motion, focus, overflow, fold, labels, honesty and the page stamp. A page that fails the Floor is not PowerUI.
 - **One ask.** Material, audience, use and tone arrive in one message. If you say "go ahead", the skill infers and states what it picked; it never invents a fact.
+- **Project fit.** Before designing, PowerUI scans the project's existing fonts, palette, type scale, spacing and framework and writes a design contract. A theme adds shape and composition; it does not overwrite a working project system.
 - **A dealt direction.** Forty-five material themes cover paper, ink, faces, surfaces, motion and voice. They are dealt against a log so consecutive builds do not repeat.
 - **An idea from the content.** The skill names the content's shape, considers six mechanisms, and builds the one that fits best.
-- **A sweep, not a vibe.** `sloplint` checks the page, the gates are walked, and a fresh-context finish review asks whether the page actually shows the idea it claims.
+- **A sweep with evidence.** `sloplint` checks the page, the gates are walked, a fresh-context review tests the idea, and the proof report records findings, contract usage and the screenshots the render tier produced.
 - **Honest proof.** No invented metrics, quotes, logos or case-study counts. Missing material is named as absent, or replaced with a library stand-in you can swap.
 
 The full operating manual is [`powerui/SKILL.md`](powerui/SKILL.md). The references hold the layout, craft, genre, imagery, niche, information-form, gate and theme material.
@@ -197,16 +198,17 @@ powerui/
   SKILL.md             the flow, the Floor, the gates and the hand-off
   package.json         npm metadata and the `powerui` command
   README.md            npm install and use instructions
-  references/          layout, craft, genres, imagery, niche, information forms,
-                       21 macrostructures, 45 theme definitions and pictures, gates
-  scripts/             theme deal/draw/scaffold/log, sloplint, capture, picture,
-                       installer, checks and tests
+  references/          automatic flow, layout, craft, genres, imagery, niche,
+                       information forms, 21 macrostructures, 45 theme definitions
+                       and pictures, gates
+  scripts/             fit, theme deal/draw/scaffold/log, sloplint, proof, capture,
+                       picture, installer, checks and tests
   agents/openai.yaml   Codex/agent metadata
   LICENSE              MIT
 examples/              four static proof pages and the proof grid
 ```
 
-The 45 themes are materials, not templates. Each theme has a `.md` contract and a `.jpg` picture. Run `node scripts/theme.mjs list` to print them.
+The 45 themes and the four examples are inherited from Hallmark under the MIT license. The automatic project-fit contract and the proof report are new PowerUI workflows. Run `node scripts/theme.mjs list` to print the theme names.
 
 ## Examples
 
@@ -232,7 +234,15 @@ node --test scripts/*.test.mjs
 npm pack --dry-run
 ```
 
-At publication the suite reports 10 passing tests, 0 failing, and 11 optional browser regressions skipped. The browser tests activate when `POWERUI_PUPPETEER` and `CHROME_PATH` (capture) or `POWERUI_TEST_PUPPETEER` and `POWERUI_TEST_CHROME` (render regressions) are set.
+Maintainer-only checks, never required from a user:
+
+```sh
+node scripts/fit.mjs scan --root ..
+node scripts/sloplint.mjs ../examples/professional/index.html --genre editorial
+node scripts/proof.mjs ../examples/professional/index.html --genre editorial --no-render
+```
+
+The suite reports 14 passing tests, 0 failing, and 11 optional browser regressions skipped. The browser tests activate when `POWERUI_PUPPETEER` and `CHROME_PATH` (capture) or `POWERUI_TEST_PUPPETEER` and `POWERUI_TEST_CHROME` (render regressions) are set.
 
 The static lint is dependency-free. `--render` needs Chrome or Chromium and `puppeteer-core`. Set `POWERUI_PUPPETEER` to a folder containing `node_modules/puppeteer-core` and `CHROME_PATH` to the browser if auto-detection misses. The render tier writes screenshots beside the page under `.powerui/`, which is ignored by this repository.
 
@@ -249,7 +259,7 @@ The core design flow works without the optional items.
 
 MIT. See [LICENSE](LICENSE). The skill and the example pages are covered by the same license. Copyright (c) 2026 PowerUI contributors.
 
-PowerUI is a tribute to Hallmark, the original design skill by Nutlope and contributors. Their copyright notice and the MIT permission notice are preserved in [LICENSE](LICENSE); the rebrand and subsequent changes are by PowerUI contributors.
+PowerUI is a tribute to Hallmark, the original design skill by Nutlope and contributors. Their copyright notice and the MIT permission notice are preserved in [LICENSE](LICENSE). The theme library and the four examples are inherited Hallmark material; the project-fit contract, proof report and subsequent changes are by PowerUI contributors.
 
 PowerUI is powered by Together AI. The example pages load type from Google Fonts and Fontshare under those providers' terms; no font files are bundled. No analytics or backend are included.
 

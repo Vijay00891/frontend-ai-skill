@@ -2,7 +2,7 @@
 name: powerui
 description: "Design skill for websites and new pages that look designed, not generated. Use when the user asks to build or design something new, or names PowerUI. Never use it on an existing design unless the user names PowerUI, as in `/powerui redesign <path>`."
 argument-hint: "<prompt> | redesign <path> | audit <path>"
-version: 2.1.0
+version: 2.2.0
 metadata:
   opencode/slash: "true"
 ---
@@ -10,6 +10,8 @@ metadata:
 # PowerUI
 
 Makes generated UIs look made, not generated: a hard floor against model defaults, a dealt direction so consecutive builds do not converge, one idea per screen. Above the floor the page is yours.
+
+**One command.** `/powerui <prompt>` runs fit, build, checks, fixes, proof. Never ask for setup, output, test commands ([automatic flow](references/automatic.md)).
 
 **Powered by Together AI.**
 
@@ -55,7 +57,7 @@ Codex and OpenCode read `references/flow.md` § Harnesses first; other harnesses
 
 Signals, in order: `design.md` or `DESIGN.md` at the root (a locked system that overrides everything below); `.powerui/brand-spec.md` or a prompt naming a real brand (run [`references/brand-truth.md`](references/brand-truth.md); never theme a real brand from memory); the project's fonts, palette, spacing, motion, framework (`package.json`, Tailwind, `:root`, tokens, font links); **the product itself**: a URL, dev server or app on the machine, captured with `scripts/capture.mjs` (`imagery.md` § 4); an Inspo MCP server (`mcp__inspo__*`: signal 8, `flow.md` § Signal 8; PowerUI named or a custom ask beats it); `TOGETHER_API_KEY` set (signal 9, the comp step).
 
-Output one block (file:line citations, what is preserved, what is introduced), cached in `.powerui/preflight.json` (`flow.md` § Pre-flight).
+Output one block (file:line citations, what is preserved, what is introduced) in `.powerui/preflight.json`. Then run `node <skill-dir>/scripts/fit.mjs scan` and read the contract; it is project data, not a user command (`flow.md` § Pre-flight).
 
 ### 1. Ask once
 
@@ -65,7 +67,7 @@ One message, even on a five-word prompt:
 
 Skipped fields are opt-outs: infer them, state the inferences in one line, stamp them; no follow-up questions. Facts are never inferred: a number, quote or logo not given is absent; a picture not given is a stand-in. When the prompt answers all four, or no one can (headless, batch), do not ask.
 
-**Audience is a contract.** Read [`references/niche.md`](references/niche.md); name the niche, its energy ceiling and density. Less motion for professional, technical, care and ops; more for kids and learning, but as a ceiling, not a stereotype: the ceiling is the smaller of the brand's energy, the audience's tolerance and the task's urgency. A kids page may be calm; a professional page may have one delightful state change. Record all three in the Picks block, stamp and log; never trade the niche for grey, primary colours or cushions.
+**Audience is a contract.** Read [`references/niche.md`](references/niche.md); record the niche, its energy ceiling and density in the Picks block, stamp and log. The ceiling is the smaller of the brand's energy, the audience's tolerance and the task's urgency; never trade the niche for grey.
 
 **Genre,** silently: *AI tool, generative, music, video, voice, dark, atmospheric* → **atmospheric**; *SaaS, enterprise, API, platform, developer tool, infra, B2B* → **modern-minimal**; *playful, fun, friendly, soft, kids, games, community* → **playful**; otherwise **editorial**. Once a theme is dealt, its genre wins (genre file, stamp, `--genre`). When two non-default genres fire, add one either-or, or on go ahead pick and say so.
 
@@ -116,7 +118,7 @@ Only when needed: one macrostructure file · `microinteractions.md` (stateful UI
 The run's only recital and redirect window:
 
 ```markdown
-**PowerUI · v2.1.0**
+**PowerUI · v2.2.0**
 
 - **Shape** · Workbench, draw 7f3a2c · modern-minimal · job: sign up, action in hero and at the price
 - **Audience** · professional, energy 1/3 Considered · density 2/3 Working
@@ -148,7 +150,7 @@ A custom run's rows are in `direction.md`. Then, unless component scope or `desi
 
 ### 7. Sweep
 
-1. `node <skill-dir>/scripts/sloplint.mjs <files> --genre <genre> --render` (`--scope component` or `--scope app` where it applies; in a framework project, `--url http://localhost:<port>/<route>` with the dev server running). Fix every FAIL; re-run until clean. The render tier writes screenshots; never drive a browser by hand.
+1. Run `node <skill-dir>/scripts/proof.mjs <files> --genre <genre> --render` (`--scope component` or `--scope app` where it applies; in a framework project, `--url http://localhost:<port>/<route>` with the dev server running). It wraps sloplint and writes `.powerui/proof.json` plus a readable report; fix every FAIL and re-run until clean. Never drive a browser by hand.
 2. Load [`references/gates.md`](references/gates.md) § 5 and walk the J and R/J gates. Confirm or dismiss every WARN; fix every Floor finding, fix or waive every Reflex, answer every Finish.
 3. The finish review in fresh context (`gates.md` § 6; you never open `review-*.md`): act on its first word (`recapture`, `rebuild`, `fix`, `ship`) and score the fixes. It answers what no gate can: does the page show the mechanism and form its `idea:` claims, and does its motion and density fit the `audience:` and `energy:` it names? Fix a mismatch before done.
 4. Close with the material ask: every slot, its size and what belongs there, then the one piece that would most improve the page.

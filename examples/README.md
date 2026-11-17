@@ -1,6 +1,6 @@
 # PowerUI proof pages
 
-Four static pages built with PowerUI v2.1.0. They are proof that the skill can produce different content forms for different audiences without falling back on the same layout.
+Four static pages inherited from Hallmark and included with PowerUI v2.2.0. They remain proof that the underlying process can produce different content forms for different audiences without falling back on the same layout.
 
 ![Four PowerUI proof pages](proofs-grid.png)
 

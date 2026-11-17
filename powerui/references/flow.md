@@ -44,7 +44,7 @@ Signals: the prompt names one element (button, input, form, card, modal, dropdow
 .btn:active, .btn.is-active { transform: translateY(1px); }
 ```
 
-Stamp: `/* PowerUI · component: <type> · genre: <genre> · theme: <theme> · states: 8 · contrast: pass · v2.1.0 */`. A component inherits its page's audience; no audience or idea fields are owed at this scope. Sweep: `sloplint --scope component`, which skips the page-only gates.
+Stamp: `/* PowerUI · component: <type> · genre: <genre> · theme: <theme> · states: 8 · contrast: pass · v2.2.0 */`. A component inherits its page's audience; no audience or idea fields are owed at this scope. Sweep: `sloplint --scope component`, which skips the page-only gates.
 
 ## App screens
 
@@ -77,7 +77,7 @@ Two runs fix a page in place instead of building one: a polish (`redesign.md`) a
 ```css
 /* PowerUI · checked: 2026-09-22 · genre: modern-minimal (inferred)
  * floor: 0 FAIL · fixed: 6 (2, 7, 22, 27, 38, 54) · structural: 2 printed (8, 42)
- * built: the project · redesign: polish · v2.1.0 */
+ * built: the project · redesign: polish · v2.2.0 */
 ```
 
 The fresh-context review still runs, one round, with the narrower question: *does anything here read as machine-made?* Close with the counts: `Swept 4 files · fixed 6 · 2 structural findings printed · Floor 0 FAIL`.
