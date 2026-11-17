@@ -16,9 +16,11 @@ The following material is new PowerUI work:
 
 - The Receiver theme and picture: `powerui/references/themes/receiver.md`, `powerui/references/themes/receiver.jpg` and its entry in `index.json`.
 - The Harbor Radio proof page and screenshot: `examples/radio/`, `examples/receiver.png`.
-- The automatic project-fit workflow: `powerui/references/automatic.md`, `powerui/scripts/fit.mjs` and its tests.
-- The proof report workflow: `powerui/scripts/proof.mjs`, the proof checks and their tests.
+- The automatic project-fit workflow: `powerui/references/automatic.md`, `powerui/scripts/fit.mjs`, `powerui/scripts/fit.test.mjs`.
+- The proof report workflow: `powerui/scripts/proof.mjs`, `powerui/scripts/proof.test.mjs`.
 - The documentation that describes these additions, including the READMEs and this file.
+
+The four new script and test files are the fit/proof pair and their tests. The other scripts in `powerui/scripts/` were present in the Hallmark import; PowerUI has renamed and adjusted some of them for its package and version, but they are not new PowerUI tools.
 
 ## Photographs
 
