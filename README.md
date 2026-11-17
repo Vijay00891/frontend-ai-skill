@@ -6,7 +6,7 @@
 
 ![Harbor Radio, an original PowerUI proof page](examples/receiver.png)
 
-<sub>Original PowerUI material: the Receiver theme and the Harbor Radio proof page. The station, its shows and all sample details are fictional.</sub>
+<sub>Original PowerUI material. Harbor Radio is one of five original proof pages, built in Receiver, one of five original themes. The station, its shows and all sample details are fictional.</sub>
 
 PowerUI installs a design process into Claude Code, Codex, Cursor or OpenCode. It is not a component library. It asks once, reads the project, chooses a direction, builds one clear idea, and sweeps the result against a measurable floor.
 
@@ -184,9 +184,9 @@ Most generated frontends converge: the same purple gradient, three floating card
 - **A hard Floor.** Sixteen non-waivable rules cover tokens, motion, focus, overflow, fold, labels, honesty and the page stamp. A page that fails the Floor is not PowerUI.
 - **One ask.** Material, audience, use and tone arrive in one message. If you say "go ahead", the skill infers and states what it picked; it never invents a fact.
 - **Project fit.** Before designing, PowerUI scans the project's existing fonts, palette, type scale, spacing and framework and writes a design contract. A theme adds shape and composition; it does not overwrite a working project system.
-- **A dealt direction.** Forty-five inherited material themes plus the original Receiver theme cover paper, ink, faces, surfaces, motion and voice. They are dealt against a log so consecutive builds do not repeat.
+- **A dealt direction.** Forty-five inherited material themes plus five original PowerUI themes — Receiver, Tidepool, Foundry, Parcel and Sundial — cover paper, ink, faces, surfaces, motion and voice. They are dealt against a log so consecutive builds do not repeat.
 - **An idea from the content.** The skill names the content's shape, considers six mechanisms, and builds the one that fits best.
-- **Original proof.** Harbor Radio is the first original PowerUI proof page, built in the original Receiver theme. The four inherited Hallmark pages remain as additional proof.
+- **Original proof.** Five original PowerUI proof pages: Harbor Radio, Tidepool School, Foundry Nine, Parcel Library and Sundial. Each is built in an original PowerUI theme; the four inherited Hallmark pages remain as additional proof.
 - **A sweep with evidence.** `sloplint` checks the page, the gates are walked, a fresh-context review tests the idea, and the proof report records findings, contract usage and the screenshots the render tier produced.
 - **Honest proof.** No invented metrics, quotes, logos or case-study counts. Missing material is named as absent, or replaced with a library stand-in you can swap.
 
@@ -200,26 +200,42 @@ powerui/
   package.json         npm metadata and the `powerui` command
   README.md            npm install and use instructions
   references/          automatic flow, layout, craft, genres, imagery, niche,
-                       information forms, 21 macrostructures, 46 theme
+                       information forms, 21 macrostructures, 50 theme
                        definitions and pictures, gates
   scripts/             fit, theme deal/draw/scaffold/log, sloplint, proof, capture,
                        picture, installer, checks and tests
   agents/openai.yaml   Codex/agent metadata
   LICENSE              MIT
-examples/              four inherited proof pages, one original proof page and images
+examples/              four inherited proof pages, five original proof pages and images
 ```
 
-The 45 inherited themes and the four inherited examples are Hallmark material. The Receiver theme, the Harbor Radio proof page, the automatic project-fit contract and the proof report are original PowerUI work. Run `node scripts/theme.mjs list` to print the theme names.
+The 45 inherited themes and the four inherited proof pages are Hallmark material. The five original themes (Receiver, Tidepool, Foundry, Parcel and Sundial), the five original proof pages (Harbor Radio, Tidepool School, Foundry Nine, Parcel Library and Sundial), the automatic project-fit contract and the proof report are original PowerUI work. Run `node scripts/theme.mjs list` to print the theme names.
 
 ## Examples
 
 ### Original PowerUI
 
+![Five original PowerUI proof pages](examples/original-pages-grid.png)
+
 | Page | Audience | Content form | Idea | Theme |
 | --- | --- | --- | --- | --- |
 | [Harbor Radio](examples/radio/index.html) | general | time | tuning-scale schedule | Receiver |
+| [Tidepool School](examples/tidepool/index.html) | kids | sequence | tide window | Tidepool |
+| [Foundry Nine](examples/foundry/index.html) | general | sequence | process ledger | Foundry |
+| [Parcel Library](examples/parcel/index.html) | general | index | shelf index | Parcel |
+| [Sundial](examples/sundial/index.html) | general | letter | open-call season | Sundial |
 
-Harbor Radio is a fictional volunteer station on Pier 9. The day is one continuous tuning scale from 06:00 to midnight, not a row of equal cards; the receiver panel and the schedule share the same dial language. The page is built in Receiver, the first original PowerUI theme, and passes the rendered proof with 0 FAIL, 0 REFLEX and 0 WARN.
+Harbor Radio is a fictional volunteer station on Pier 9. The day is one continuous tuning scale from 06:00 to midnight, not a row of equal cards; the receiver panel and the schedule share the same dial language. It is built in Receiver.
+
+Tidepool School is a fictional family shore school at Cove 4, Bracken Bay. The page follows a session from the blue hut to the tide window, with a shore code and a field guide of local creatures. It is built in Tidepool.
+
+Foundry Nine is a fictional public metal workshop. The page is a process ledger from pattern to pour, with a materials shelf and an open-studio invitation. It is built in Foundry.
+
+Parcel Library is a fictional neighbourhood tool library on Mill Lane. The page is a shelf-marked index; the catalogue, borrowing steps and repair bench share one ruled table language. It is built in Parcel.
+
+Sundial is a fictional artist residency at the Old Printworks in Aubrac. The page is an open call: a letter, a studio table, a season timeline and the details of what to send. It is built in Sundial.
+
+The five themes and five pages are original PowerUI material, not renamed Hallmark work. All five pass the rendered proof with 0 FAIL, 0 REFLEX and 0 WARN.
 
 ### Inherited Hallmark
 
@@ -234,7 +250,7 @@ Harbor Radio is a fictional volunteer station on Pier 9. The day is one continuo
 
 The pages are static and need no build. Open any `index.html` directly, or serve the `examples/` folder with any static file server.
 
-All five brands, their copy and sample data are fictional; the station, its shows and its people are invented. There are no real client metrics, testimonials, logos or case studies in these pages. Other than the station's mail link on Harbor Radio, the pages have no working forms or backend.
+All nine brands, their copy and sample data are fictional; the stations, schools, workshops, libraries, residencies and their people are invented. There are no real client metrics, testimonials, logos or case studies in these pages. The five original pages use reserved `.example` mail links and no backend; the inherited forms are demonstrations and submit nowhere.
 
 ## Development
 
@@ -272,9 +288,9 @@ The core design flow works without the optional items.
 
 MIT. See [LICENSE](LICENSE). The skill and the original proof pages are covered by the same license. Copyright (c) 2026 PowerUI contributors.
 
-PowerUI began from Hallmark, the original design skill by Nutlope and contributors. Their copyright notice and the MIT permission notice are preserved in [LICENSE](LICENSE). The 45 inherited themes and the four inherited examples remain Hallmark material; the Receiver theme, the Harbor Radio proof page, the project-fit contract and the proof report are original PowerUI work. See [ATTRIBUTION.md](ATTRIBUTION.md) for the exact split.
+PowerUI began from Hallmark, the original design skill by Nutlope and contributors. Their copyright notice and the MIT permission notice are preserved in [LICENSE](LICENSE). The 45 inherited themes and the four inherited proof pages remain Hallmark material; the five original themes, the five original proof pages, the project-fit contract and the proof report are original PowerUI work. See [ATTRIBUTION.md](ATTRIBUTION.md) for the exact split.
 
-The Harbor Radio page includes photographs by [The Midnite Wolf](https://commons.wikimedia.org/wiki/File:Shure_SM7.jpg) (CC0) and [ArildV](https://commons.wikimedia.org/wiki/File:Newlyn_old_harbour_pier_July_2026_01.jpg) (CC BY-SA 4.0), both from Wikimedia Commons. Those images keep their own licenses; the page carries their credits.
+The original pages use Wikimedia Commons photographs under their own licenses: Harbor Radio by [The Midnite Wolf](https://commons.wikimedia.org/wiki/File:Shure_SM7.jpg) (CC0) and [ArildV](https://commons.wikimedia.org/wiki/File:Newlyn_old_harbour_pier_July_2026_01.jpg) (CC BY-SA 4.0); Tidepool School by [Jebulon](https://commons.wikimedia.org/wiki/File:Low_tide_in_Rivedoux,_R%C3%A9_island,_august_2015.jpg) (CC0); Foundry Nine by [OJjnr](https://commons.wikimedia.org/wiki/File:Blacksmith_At_Work_02.jpg) (CC BY-SA 4.0); Parcel Library by [Shixart1985](https://commons.wikimedia.org/wiki/File:Various_tools_hanging_on_a_pegboard_in_a_workshop_setting_with_natural_light_filtering_in.jpg) (CC BY 2.0); and Sundial by [AlexDS05](https://commons.wikimedia.org/wiki/File:Interior_of_Camille_Pissarro_s_studio_at_%C3%89ragny-sur-Epte_-_2026.jpg) (CC0). Each page carries its credit; the images keep their own licenses.
 
 PowerUI is powered by Together AI. The example pages load type from Google Fonts and Fontshare under those providers' terms; no font files are bundled. No analytics or backend are included.
 

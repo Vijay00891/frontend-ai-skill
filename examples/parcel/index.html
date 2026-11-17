@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parcel Library | A neighbourhood tool library</title>
+  <meta name="description" content="Parcel Library lends tools to the neighbourhood. Browse the index, read how borrowing works and find the shed on Mill Lane.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=DM+Mono&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="masthead__bar">
+      <div class="container masthead__bar-in">
+        <p>A neighbourhood tool library</p>
+        <p>Free to join</p>
+      </div>
+    </div>
+    <div class="container masthead__in">
+      <a class="wordmark" href="#top">Parcel Library</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#index">The index</a>
+        <a href="#borrow">Borrowing</a>
+        <a href="#repair">Repair bench</a>
+        <a href="#find">Find us</a>
+      </nav>
+      <a class="key key--primary masthead__cta" href="mailto:join@parcellibrary.example">Join the library</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__in">
+        <figure class="hero-photo">
+          <img src="./img/various-tools-hanging-on-a-pegboard-in-a-workshop-setting-wi-1920.jpg" alt="Pliers, wrenches and screwdrivers hung on a perforated pegboard." width="1920" height="1282" fetchpriority="high" decoding="async">
+        </figure>
+
+        <div class="hero__copy">
+          <h1 id="hero-title">Borrow the tool. Finish the job.</h1>
+          <p class="lead">A neighbourhood library for the things you need once, not forever.</p>
+          <div class="hero__actions">
+            <a class="key key--primary" href="mailto:join@parcellibrary.example">Join the library</a>
+            <a class="key key--quiet" href="#index">Browse the index</a>
+          </div>
+          <p class="hero__note">Open Tue and Thu 17:00 to 20:00, Sat 09:00 to 13:00.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--index" id="index" aria-labelledby="index-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="index-title">The index.</h2>
+          <p>Six tools to start.</p>
+        </div>
+
+        <table class="index">
+          <thead>
+            <tr><th scope="col">Mark</th><th scope="col">Tool</th><th scope="col">For</th><th scope="col">Loan</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" class="index__mark">T-01</th><td class="index__tool">Drill, cordless</td><td>Shelves, flat-pack, small repairs.</td><td class="index__loan">7 days</td></tr>
+            <tr><th scope="row" class="index__mark">T-02</th><td class="index__tool">Sander, orbital</td><td>Doors, trim, old paint.</td><td class="index__loan">7 days</td></tr>
+            <tr><th scope="row" class="index__mark">T-03</th><td class="index__tool">Tile cutter</td><td>Kitchen and bathroom tile.</td><td class="index__loan">4 days</td></tr>
+            <tr><th scope="row" class="index__mark">T-04</th><td class="index__tool">Wallpaper steamer</td><td>Stripping old paper.</td><td class="index__loan">4 days</td></tr>
+            <tr><th scope="row" class="index__mark">T-05</th><td class="index__tool">Hedge trimmer</td><td>Garden edges, light hedges.</td><td class="index__loan">3 days</td></tr>
+            <tr><th scope="row" class="index__mark">T-06</th><td class="index__tool">Sewing machine</td><td>Repairs, curtains, hems.</td><td class="index__loan">7 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section section--borrow" id="borrow" aria-labelledby="borrow-title">
+      <div class="container borrow__in">
+        <div class="borrow__head">
+          <h2 id="borrow-title">How borrowing works.</h2>
+          <p>No fee. No deposit. One loan at a time.</p>
+        </div>
+
+        <ol class="borrow-steps">
+          <li class="borrow-step">
+            <span class="borrow-step__num" aria-hidden="true">01</span>
+            <div>
+              <h3>Join at the desk</h3>
+              <p>Proof of address and phone.</p>
+            </div>
+          </li>
+          <li class="borrow-step">
+            <span class="borrow-step__num" aria-hidden="true">02</span>
+            <div>
+              <h3>Choose a tool</h3>
+              <p>Check the box and the blade.</p>
+            </div>
+          </li>
+          <li class="borrow-step">
+            <span class="borrow-step__num" aria-hidden="true">03</span>
+            <div>
+              <h3>Return it clean</h3>
+              <p>Late is fine if you call.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--repair" id="repair" aria-labelledby="repair-title">
+      <div class="container repair__in">
+        <div class="repair__head">
+          <h2 id="repair-title">Bring the broken thing.</h2>
+          <p>Volunteers run the bench on Saturday mornings.</p>
+        </div>
+
+        <ul class="repair-list">
+          <li class="repair-row"><h3>Garden tools</h3><p>Sharpen, rehandle, free.</p></li>
+          <li class="repair-row"><h3>Small appliances</h3><p>Test, open, advise.</p></li>
+          <li class="repair-row"><h3>Bikes</h3><p>Punctures, brakes, gears.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--find" id="find" aria-labelledby="find-title">
+      <div class="container find__in">
+        <div class="find__copy">
+          <h2 id="find-title">Find the shed.</h2>
+          <p>Rear of the Old Laundry, 8 Mill Lane. Bus 6 to Mill Lane.</p>
+          <a class="key key--primary" href="mailto:join@parcellibrary.example">Join the library</a>
+        </div>
+
+        <div class="find__hours">
+          <h3>Open hours</h3>
+          <table class="hours">
+            <thead><tr><th scope="col">Day</th><th scope="col">Hours</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Tue and Thu</th><td>17:00 to 20:00</td></tr>
+              <tr><th scope="row">Saturday</th><td>09:00 to 13:00</td></tr>
+              <tr><th scope="row">Sun and Mon</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <div class="footer__brand">
+        <p class="footer__mark">Parcel Library</p>
+        <p>8 Mill Lane<br>Bristol</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#index">The index</a>
+        <a href="#borrow">Borrowing</a>
+        <a href="#repair">Repair bench</a>
+        <a href="#find">Find us</a>
+      </nav>
+      <div class="footer__note">
+        <p>Fictional tool library. PowerUI proof page. Tools, periods and hours are samples.</p>
+        <p data-credits>Photographs: <a href="https://commons.wikimedia.org/wiki/File:Various_tools_hanging_on_a_pegboard_in_a_workshop_setting_with_natural_light_filtering_in.jpg">Shixart1985</a> (CC BY 2.0, Wikimedia Commons).</p>
+        <p>Parcel theme.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

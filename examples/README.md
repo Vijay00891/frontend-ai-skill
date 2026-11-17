@@ -1,25 +1,52 @@
 # PowerUI proof pages
 
-PowerUI carries five finished static proof pages: one original PowerUI page and four inherited from Hallmark. They show that the process can produce different content forms for different audiences without falling back on the same layout.
+PowerUI carries nine finished static proof pages: five original PowerUI pages and four inherited from Hallmark. They show that the process can produce different content forms for different audiences without falling back on the same layout.
 
-## Original PowerUI: Harbor Radio
+![Five original PowerUI proof pages](original-pages-grid.png)
 
-[Open Harbor Radio](radio/index.html)
+## Original PowerUI
 
-![Harbor Radio, the original PowerUI proof page](receiver.png)
+The five pages below are new PowerUI work. Their themes are original materials, not renamed Hallmark themes.
 
-Harbor Radio is a fictional volunteer station on Pier 9. The page is built around one tuning scale: the day's schedule is a continuous band from 06:00 to midnight, the receiver panel and the selected show share the same dial language, and the open-day table is the visit route. It is set in the original Receiver theme, not a renamed Hallmark theme.
+| Page | Audience | Content form | Idea | Job | Theme |
+| --- | --- | --- | --- | --- | --- |
+| [Harbor Radio](radio/index.html) | general | time | tuning-scale schedule | visit the open day | Receiver |
+| [Tidepool School](tidepool/index.html) | kids | sequence | tide window | book a shore session | Tidepool |
+| [Foundry Nine](foundry/index.html) | general | sequence | process ledger | book a tour | Foundry |
+| [Parcel Library](parcel/index.html) | general | index | shelf index | join the library | Parcel |
+| [Sundial](sundial/index.html) | general | letter | open-call season | apply to the residency | Sundial |
 
-| Field | Value |
-| --- | --- |
-| Audience | general |
-| Content form | time |
-| Idea | tuning-scale schedule |
-| Job | visit the open day |
-| Theme | Receiver (original) |
-| Proof | 0 FAIL, 0 REFLEX, 0 WARN with rendered screenshots at 1280, 1440, 1920 and 375 |
+All five report 0 FAIL, 0 REFLEX and 0 WARN with rendered screenshots at 1280, 1440, 1920 and 375.
 
-Photographs: [The Midnite Wolf](https://commons.wikimedia.org/wiki/File:Shure_SM7.jpg) (CC0) and [ArildV](https://commons.wikimedia.org/wiki/File:Newlyn_old_harbour_pier_July_2026_01.jpg) (CC BY-SA 4.0), both from Wikimedia Commons. The page carries both credits.
+### Harbor Radio
+
+Harbor Radio is a fictional volunteer station on Pier 9. The page is built around one tuning scale: the day's schedule is a continuous band from 06:00 to midnight, the receiver panel and the selected show share the same dial language, and the open-day table is the visit route. It is set in Receiver.
+
+Photographs: [The Midnite Wolf](https://commons.wikimedia.org/wiki/File:Shure_SM7.jpg) (CC0) and [ArildV](https://commons.wikimedia.org/wiki/File:Newlyn_old_harbour_pier_July_2026_01.jpg) (CC BY-SA 4.0), both from Wikimedia Commons.
+
+### Tidepool School
+
+Tidepool School is a fictional family shore school at Cove 4, Bracken Bay. The page follows one session from arrival to the tide window; the timetable is the route, and the field guide is made from the creatures the page names. It is set in Tidepool.
+
+Photograph: [Low tide in Rivedoux, Ré island](https://commons.wikimedia.org/wiki/File:Low_tide_in_Rivedoux,_R%C3%A9_island,_august_2015.jpg) by Jebulon (CC0, Wikimedia Commons).
+
+### Foundry Nine
+
+Foundry Nine is a fictional public metal workshop for artists, fabricators and neighbours. The page is a process ledger from pattern to pour, with a materials shelf and an open-studio invitation; the dark surface, hard rules and safety-orange signal carry the foundry. It is set in Foundry.
+
+Photograph: [Blacksmith at work](https://commons.wikimedia.org/wiki/File:Blacksmith_At_Work_02.jpg) by OJjnr (CC BY-SA 4.0, Wikimedia Commons).
+
+### Parcel Library
+
+Parcel Library is a fictional neighbourhood tool library on Mill Lane. The page is a shelf-marked index; the catalogue, borrowing steps and repair bench share one ruled table language. It is set in Parcel.
+
+Photograph: [Various tools hanging on a pegboard](https://commons.wikimedia.org/wiki/File:Various_tools_hanging_on_a_pegboard_in_a_workshop_setting_with_natural_light_filtering_in.jpg) by Shixart1985 (CC BY 2.0, Wikimedia Commons).
+
+### Sundial
+
+Sundial is a fictional artist residency at the Old Printworks in Aubrac. The page is an open call: a letter, a studio table, a season timeline and the details of what to send. It is set in Sundial.
+
+Photograph: [Interior of Camille Pissarro's studio at Éragny-sur-Epte](https://commons.wikimedia.org/wiki/File:Interior_of_Camille_Pissarro_s_studio_at_%C3%89ragny-sur-Epte_-_2026.jpg) by AlexDS05 (CC0, Wikimedia Commons).
 
 ## Inherited from Hallmark
 
@@ -43,7 +70,7 @@ cd frontend-ai-skill/examples
 npx serve .
 ```
 
-The inherited pages load fonts from Google Fonts and Fontshare; Harbor Radio loads Google Fonts. They fall back to local faces offline. There is no backend. The inherited forms are demonstrations and submit nowhere; the station's mail link on Harbor Radio uses the reserved `.example` domain.
+The five original pages load Google Fonts; the inherited pages load Google Fonts and Fontshare. They fall back to local faces offline. There is no backend. The original pages use reserved `.example` mail links; the inherited forms are demonstrations and submit nowhere.
 
 ## What each inherited page shows
 
@@ -52,7 +79,7 @@ The inherited pages load fonts from Google Fonts and Fontshare; Harbor Radio loa
 - **Wayfind**: a shipment board for ops. The page is a state machine: a sample shipment moves through network, journey, board and delivery, with the same route driving the map and the board.
 - **Two Drums**: a community print studio. The page is a layer stack: the proof separates into its blue and pink drums, and the layer control changes what the visitor sees. The print marks are made in CSS, not a decorative illustration.
 
-All five brands, their copy and sample data are fictional; the station, its shows and its people are invented. No real client metrics, testimonials, logos or case studies appear in these pages.
+All nine brands, their copy and sample data are fictional; the stations, schools, workshops, libraries, residencies and their people are invented. No real client metrics, testimonials, logos or case studies appear in these pages.
 
 ## Not a component library
 
@@ -62,4 +89,4 @@ See [`../powerui/SKILL.md`](../powerui/SKILL.md) for the flow, the Floor and the
 
 ## License
 
-MIT for PowerUI and the inherited Hallmark material. The Harbor Radio photographs keep their own licenses, named above and on the page. See [`../LICENSE`](../LICENSE).
+MIT for PowerUI and the inherited Hallmark material. The photographs keep their own licenses, named above and on the pages. See [`../LICENSE`](../LICENSE).

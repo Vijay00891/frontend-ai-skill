@@ -8,7 +8,7 @@ PowerUI installs a complete design workflow into Claude Code, Codex CLI, Cursor 
 
 The npm package is named `powerui-skill`. Its installer command is `powerui`. Normal use stays one command: `/powerui <prompt>`. The skill runs project fit, build, checks, fixes and the proof report internally; you do not run a second command to test, screenshot or report.
 
-The repository also carries original material: the Receiver theme and the Harbor Radio proof page. They sit beside the inherited Hallmark themes and examples, clearly separated in the repository. The npm package includes the Receiver theme; the proof page lives in the repository's `examples/` folder.
+The repository also carries original material: five original themes (Receiver, Tidepool, Foundry, Parcel and Sundial) and five original proof pages (Harbor Radio, Tidepool School, Foundry Nine, Parcel Library and Sundial). They sit beside the inherited Hallmark themes and examples, clearly separated in the repository. The npm package includes the five original themes; the proof pages live in the repository's `examples/` folder.
 
 ## Install
 
@@ -141,15 +141,15 @@ The package installs the skill, not a project. It never adds dependencies to you
 ```text
 SKILL.md             the flow, the Floor, the gates and the hand-off
 references/          automatic flow, layout, craft, genres, imagery, niche,
-                     information forms, 21 macrostructures, 46 theme definitions
-                     (45 inherited, Receiver original) and pictures, gates
+                     information forms, 21 macrostructures, 50 theme definitions
+                     (45 inherited, five original) and pictures, gates
 scripts/             fit, theme deal/draw/scaffold/log, sloplint, proof, capture,
                      picture, installer, checks
 agents/openai.yaml   Codex/agent metadata
 LICENSE              MIT
 ```
 
-The repository also carries four inherited static proof pages, one original proof page and the full development notes:
+The repository also carries four inherited static proof pages, five original proof pages and the full development notes:
 
 <https://github.com/Vijay00891/frontend-ai-skill>
 
@@ -176,6 +176,6 @@ The core design flow works without the optional items.
 
 MIT. See [LICENSE](LICENSE). Copyright (c) 2026 PowerUI contributors.
 
-PowerUI began from Hallmark, the original design skill by Nutlope and contributors. Their copyright notice and the MIT permission notice are preserved in [LICENSE](LICENSE). The 45 inherited themes and the four inherited examples remain Hallmark material; the Receiver theme, the Harbor Radio proof page, the project-fit contract and the proof report are original PowerUI work. See [ATTRIBUTION.md](https://github.com/Vijay00891/frontend-ai-skill/blob/main/ATTRIBUTION.md) for the exact split.
+PowerUI began from Hallmark, the original design skill by Nutlope and contributors. Their copyright notice and the MIT permission notice are preserved in [LICENSE](LICENSE). The 45 inherited themes and the four inherited proof pages remain Hallmark material; the five original themes, the five original proof pages, the project-fit contract and the proof report are original PowerUI work. See [ATTRIBUTION.md](https://github.com/Vijay00891/frontend-ai-skill/blob/main/ATTRIBUTION.md) for the exact split. Photograph credits for the original pages are on the pages and in that file.
 
 PowerUI is powered by Together AI. The example pages load type from Google Fonts and Fontshare under those providers' terms; no font files are bundled. No analytics or backend are included.

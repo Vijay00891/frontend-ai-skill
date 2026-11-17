@@ -743,6 +743,52 @@
    "picture": "references/themes/formwork.jpg"
   },
   {
+   "name": "Foundry",
+   "slug": "foundry",
+   "genre": "atmospheric",
+   "posture": "committed",
+   "paper": {
+    "band": "dark",
+    "L": 18,
+    "hue": 60
+   },
+   "display": {
+    "class": "grotesk-heavy",
+    "face": "Archivo Black"
+   },
+   "accent": {
+    "band": "warm",
+    "hue": 55
+   },
+   "keywords": [
+    "foundry",
+    "metal",
+    "iron",
+    "cast",
+    "forge",
+    "workshop",
+    "industrial",
+    "craft",
+    "sculpture",
+    "art",
+    "commission",
+    "process",
+    "heat",
+    "anvil",
+    "molten",
+    "steel",
+    "bronze",
+    "fabrication",
+    "maker",
+    "studio"
+   ],
+   "material": "graphite dust, chalk marks, iron grey, safety orange, a coarse matte surface, and one hot-metal accent",
+   "file": "references/themes/foundry.md",
+   "photo": "mono con=12",
+   "pictured": "Narrative Workflow, split hero",
+   "picture": "references/themes/foundry.jpg"
+  },
+  {
    "name": "Furrow",
    "slug": "furrow",
    "genre": "modern-minimal",
@@ -1384,6 +1430,51 @@
    "picture": "references/themes/overprint.jpg"
   },
   {
+   "name": "Parcel",
+   "slug": "parcel",
+   "genre": "modern-minimal",
+   "posture": "restrained",
+   "paper": {
+    "band": "light",
+    "L": 92,
+    "hue": 75
+   },
+   "display": {
+    "class": "slab-serif",
+    "face": "Arvo"
+   },
+   "accent": {
+    "band": "warm",
+    "hue": 28
+   },
+   "keywords": [
+    "library",
+    "tools",
+    "borrow",
+    "share",
+    "community",
+    "repair",
+    "workshop",
+    "shed",
+    "equipment",
+    "lend",
+    "membership",
+    "volunteer",
+    "neighbourhood",
+    "maker",
+    "garden",
+    "home",
+    "diy",
+    "circular",
+    "reuse"
+   ],
+   "material": "kraft board, a corrugated edge, stamp red, chalk-white labels, grey twine, and a plain utility type",
+   "file": "references/themes/parcel.md",
+   "photo": "muted con=6",
+   "pictured": "Catalogue, split hero",
+   "picture": "references/themes/parcel.jpg"
+  },
+  {
    "name": "Paste-up",
    "slug": "pasteup",
    "genre": "playful",
@@ -2009,6 +2100,51 @@
    "picture": "references/themes/studio.jpg"
   },
   {
+   "name": "Sundial",
+   "slug": "sundial",
+   "genre": "editorial",
+   "posture": "full-palette",
+   "paper": {
+    "band": "mid",
+    "L": 78,
+    "hue": 75
+   },
+   "display": {
+    "class": "high-contrast-serif",
+    "face": "Gloock"
+   },
+   "accent": {
+    "band": "chromatic-ochre",
+    "hue": 70
+   },
+   "keywords": [
+    "residency",
+    "artists",
+    "studio",
+    "arts",
+    "gallery",
+    "exhibition",
+    "open call",
+    "summer",
+    "garden",
+    "landscape",
+    "sculpture",
+    "print",
+    "ceramics",
+    "retreat",
+    "fellowship",
+    "application",
+    "deadline",
+    "rural",
+    "heritage"
+   ],
+   "material": "limestone paper, ochre ink, long shadows, burnt sienna, engraved rules, and a sun-bleached serif",
+   "file": "references/themes/sundial.md",
+   "photo": "warm con=5 sat=4",
+   "pictured": "Letter, split hero",
+   "picture": "references/themes/sundial.jpg"
+  },
+  {
    "name": "Terminal",
    "slug": "terminal",
    "genre": "atmospheric",
@@ -2051,6 +2187,52 @@
    "photo": "duotone paper accent con=20",
    "pictured": "Session, Split hero",
    "picture": "references/themes/terminal.jpg"
+  },
+  {
+   "name": "Tidepool",
+   "slug": "tidepool",
+   "genre": "playful",
+   "posture": "committed",
+   "paper": {
+    "band": "light",
+    "L": 95,
+    "hue": 180
+   },
+   "display": {
+    "class": "rounded-sans",
+    "face": "Varela Round"
+   },
+   "accent": {
+    "band": "chromatic-teal",
+    "hue": 180
+   },
+   "keywords": [
+    "tidepool",
+    "tide",
+    "coast",
+    "shore",
+    "sea",
+    "ocean",
+    "marine",
+    "kids",
+    "family",
+    "school",
+    "classes",
+    "learn",
+    "water",
+    "safety",
+    "community",
+    "workshop",
+    "beach",
+    "nature",
+    "conservation",
+    "outdoor"
+   ],
+   "material": "wet slate, sea-glass green, coral signal, chalk-white rules, soft rubber corners, and a bright low-tide palette",
+   "file": "references/themes/tidepool.md",
+   "photo": "natural con=4 sat=8",
+   "pictured": "Field Guide, split hero",
+   "picture": "references/themes/tidepool.jpg"
   },
   {
    "name": "Wayfind",
