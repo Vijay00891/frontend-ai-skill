@@ -4,9 +4,9 @@
 
 [![verify](https://github.com/Vijay00891/frontend-ai-skill/actions/workflows/verify.yml/badge.svg)](https://github.com/Vijay00891/frontend-ai-skill/actions/workflows/verify.yml)
 
-![Four inherited proof pages](examples/proofs-grid.png)
+![Harbor Radio, an original PowerUI proof page](examples/receiver.png)
 
-<sub>Four proof pages inherited from Hallmark, included with PowerUI v2.2.0. All brands, copy and data are fictional.</sub>
+<sub>Original PowerUI material: the Receiver theme and the Harbor Radio proof page. The station, its shows and all sample details are fictional.</sub>
 
 PowerUI installs a design process into Claude Code, Codex, Cursor or OpenCode. It is not a component library. It asks once, reads the project, chooses a direction, builds one clear idea, and sweeps the result against a measurable floor.
 
@@ -184,8 +184,9 @@ Most generated frontends converge: the same purple gradient, three floating card
 - **A hard Floor.** Sixteen non-waivable rules cover tokens, motion, focus, overflow, fold, labels, honesty and the page stamp. A page that fails the Floor is not PowerUI.
 - **One ask.** Material, audience, use and tone arrive in one message. If you say "go ahead", the skill infers and states what it picked; it never invents a fact.
 - **Project fit.** Before designing, PowerUI scans the project's existing fonts, palette, type scale, spacing and framework and writes a design contract. A theme adds shape and composition; it does not overwrite a working project system.
-- **A dealt direction.** Forty-five material themes cover paper, ink, faces, surfaces, motion and voice. They are dealt against a log so consecutive builds do not repeat.
+- **A dealt direction.** Forty-five inherited material themes plus the original Receiver theme cover paper, ink, faces, surfaces, motion and voice. They are dealt against a log so consecutive builds do not repeat.
 - **An idea from the content.** The skill names the content's shape, considers six mechanisms, and builds the one that fits best.
+- **Original proof.** Harbor Radio is the first original PowerUI proof page, built in the original Receiver theme. The four inherited Hallmark pages remain as additional proof.
 - **A sweep with evidence.** `sloplint` checks the page, the gates are walked, a fresh-context review tests the idea, and the proof report records findings, contract usage and the screenshots the render tier produced.
 - **Honest proof.** No invented metrics, quotes, logos or case-study counts. Missing material is named as absent, or replaced with a library stand-in you can swap.
 
@@ -199,18 +200,30 @@ powerui/
   package.json         npm metadata and the `powerui` command
   README.md            npm install and use instructions
   references/          automatic flow, layout, craft, genres, imagery, niche,
-                       information forms, 21 macrostructures, 45 theme definitions
-                       and pictures, gates
+                       information forms, 21 macrostructures, 46 theme
+                       definitions and pictures, gates
   scripts/             fit, theme deal/draw/scaffold/log, sloplint, proof, capture,
                        picture, installer, checks and tests
   agents/openai.yaml   Codex/agent metadata
   LICENSE              MIT
-examples/              four static proof pages and the proof grid
+examples/              four inherited proof pages, one original proof page and images
 ```
 
-The 45 themes and the four examples are inherited from Hallmark under the MIT license. The automatic project-fit contract and the proof report are new PowerUI workflows. Run `node scripts/theme.mjs list` to print the theme names.
+The 45 inherited themes and the four inherited examples are Hallmark material. The Receiver theme, the Harbor Radio proof page, the automatic project-fit contract and the proof report are original PowerUI work. Run `node scripts/theme.mjs list` to print the theme names.
 
 ## Examples
+
+### Original PowerUI
+
+| Page | Audience | Content form | Idea | Theme |
+| --- | --- | --- | --- | --- |
+| [Harbor Radio](examples/radio/index.html) | general | time | tuning-scale schedule | Receiver |
+
+Harbor Radio is a fictional volunteer station on Pier 9. The day is one continuous tuning scale from 06:00 to midnight, not a row of equal cards; the receiver panel and the schedule share the same dial language. The page is built in Receiver, the first original PowerUI theme, and passes the rendered proof with 0 FAIL, 0 REFLEX and 0 WARN.
+
+### Inherited Hallmark
+
+![Four proof pages inherited from Hallmark](examples/proofs-grid.png)
 
 | Page | Audience | Content form | Idea | Theme |
 | --- | --- | --- | --- | --- |
@@ -221,7 +234,7 @@ The 45 themes and the four examples are inherited from Hallmark under the MIT li
 
 The pages are static and need no build. Open any `index.html` directly, or serve the `examples/` folder with any static file server.
 
-All four brands, names, copy and data are fictional. There are no real client metrics, testimonials, logos or case studies in these pages. The forms submit nowhere.
+All five brands, their copy and sample data are fictional; the station, its shows and its people are invented. There are no real client metrics, testimonials, logos or case studies in these pages. Other than the station's mail link on Harbor Radio, the pages have no working forms or backend.
 
 ## Development
 
@@ -257,9 +270,11 @@ The core design flow works without the optional items.
 
 ## License and attribution
 
-MIT. See [LICENSE](LICENSE). The skill and the example pages are covered by the same license. Copyright (c) 2026 PowerUI contributors.
+MIT. See [LICENSE](LICENSE). The skill and the original proof pages are covered by the same license. Copyright (c) 2026 PowerUI contributors.
 
-PowerUI is a tribute to Hallmark, the original design skill by Nutlope and contributors. Their copyright notice and the MIT permission notice are preserved in [LICENSE](LICENSE). The theme library and the four examples are inherited Hallmark material; the project-fit contract, proof report and subsequent changes are by PowerUI contributors.
+PowerUI began from Hallmark, the original design skill by Nutlope and contributors. Their copyright notice and the MIT permission notice are preserved in [LICENSE](LICENSE). The 45 inherited themes and the four inherited examples remain Hallmark material; the Receiver theme, the Harbor Radio proof page, the project-fit contract and the proof report are original PowerUI work. See [ATTRIBUTION.md](ATTRIBUTION.md) for the exact split.
+
+The Harbor Radio page includes photographs by [The Midnite Wolf](https://commons.wikimedia.org/wiki/File:Shure_SM7.jpg) (CC0) and [ArildV](https://commons.wikimedia.org/wiki/File:Newlyn_old_harbour_pier_July_2026_01.jpg) (CC BY-SA 4.0), both from Wikimedia Commons. Those images keep their own licenses; the page carries their credits.
 
 PowerUI is powered by Together AI. The example pages load type from Google Fonts and Fontshare under those providers' terms; no font files are bundled. No analytics or backend are included.
 

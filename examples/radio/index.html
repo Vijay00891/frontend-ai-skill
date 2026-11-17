@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harbor Radio 88.4 FM | Open day at Pier 9</title>
+  <meta name="description" content="Harbor Radio is a volunteer station on Pier 9. See the Saturday schedule, meet the shows and visit the studio on 22 November.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="masthead__bar">
+      <div class="container masthead__bar-in">
+        <p class="masthead__freq"><span class="freq">88.4</span> FM</p>
+        <p class="masthead__place">Pier 9, Old Fish Quay</p>
+        <p class="masthead__date">Open day, Sat 22 Nov</p>
+      </div>
+    </div>
+    <div class="container masthead__main">
+      <a class="wordmark" href="#top">Harbor Radio</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#day">The day</a>
+        <a href="#shows">Shows</a>
+        <a href="#room">The room</a>
+        <a href="#visit">Find us</a>
+      </nav>
+      <a class="key key--primary masthead__cta" href="#visit">Plan your visit</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero__in">
+        <div class="hero__copy">
+          <h1 id="hero-title">A whole harbor, on 88.4.</h1>
+          <p class="lead">A volunteer station on Pier 9. The studio opens on 22 November.</p>
+          <div class="hero__actions">
+            <a class="key key--primary" href="#visit">See the open day</a>
+            <a class="key key--quiet" href="#day">Read the schedule</a>
+          </div>
+          <p class="hero__note">Doors 11:00 to 18:00. Last entry 17:30. Step-free access.</p>
+        </div>
+
+        <div class="receiver" role="group" aria-label="Tuning dial set to 88.4 FM">
+          <div class="receiver__head">
+            <p class="receiver__name">Harbor Radio</p>
+            <p class="receiver__place">Pier 9</p>
+          </div>
+          <div class="receiver__readout">
+            <p class="receiver__freq">88.4</p>
+            <p class="receiver__unit">FM</p>
+          </div>
+          <div class="dial" aria-hidden="true">
+            <div class="dial__ticks"></div>
+            <div class="dial__numbers">
+              <span>87</span><span>90</span><span>94</span><span>98</span><span>102</span><span>106</span><span>108</span>
+            </div>
+            <span class="dial__needle"></span>
+          </div>
+          <div class="receiver__foot">
+            <p>Saturday, 22 November</p>
+            <p>Open day 11:00 to 18:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--day" id="day" aria-labelledby="day-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="day-title">The day, as it airs.</h2>
+          <p>Saturday runs from 06:00 to midnight. Choose a block to read the show.</p>
+        </div>
+
+        <div class="schedule">
+          <div class="schedule__hours" aria-hidden="true">
+            <span style="grid-column: 1">06</span>
+            <span style="grid-column: 4">09</span>
+            <span style="grid-column: 6">11</span>
+            <span style="grid-column: 8">13</span>
+            <span style="grid-column: 10">15</span>
+            <span style="grid-column: 12">17</span>
+            <span style="grid-column: 14">19</span>
+            <span style="grid-column: 16">21</span>
+            <span style="grid-column: 18">24</span>
+          </div>
+          <div class="schedule__band" role="group" aria-label="Saturday schedule">
+            <button class="show-block is-selected" type="button" data-show="breakfast" aria-pressed="true" style="--start: 1; --span: 3">
+              <span class="show-block__time">06:00</span>
+              <span class="show-block__title">Harbor Breakfast</span>
+            </button>
+            <button class="show-block" type="button" data-show="longpier" aria-pressed="false" style="--start: 4; --span: 2">
+              <span class="show-block__time">09:00</span>
+              <span class="show-block__title">The Long Pier</span>
+            </button>
+            <button class="show-block" type="button" data-show="opendesk" aria-pressed="false" style="--start: 6; --span: 2">
+              <span class="show-block__time">11:00</span>
+              <span class="show-block__title">Open Desk</span>
+            </button>
+            <button class="show-block" type="button" data-show="salt" aria-pressed="false" style="--start: 8; --span: 2">
+              <span class="show-block__time">13:00</span>
+              <span class="show-block__title">Salt &amp; Signal</span>
+            </button>
+            <button class="show-block" type="button" data-show="shift" aria-pressed="false" style="--start: 10; --span: 2">
+              <span class="show-block__time">15:00</span>
+              <span class="show-block__title">The Shift</span>
+            </button>
+            <button class="show-block" type="button" data-show="ferry" aria-pressed="false" style="--start: 12; --span: 2">
+              <span class="show-block__time">17:00</span>
+              <span class="show-block__title">Night Ferry</span>
+            </button>
+            <button class="show-block" type="button" data-show="lowlight" aria-pressed="false" style="--start: 14; --span: 2">
+              <span class="show-block__time">19:00</span>
+              <span class="show-block__title">Low Light</span>
+            </button>
+            <button class="show-block" type="button" data-show="after" aria-pressed="false" style="--start: 16; --span: 3">
+              <span class="show-block__time">21:00</span>
+              <span class="show-block__title">After Hours</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="now" aria-live="polite">
+          <p class="now__time" id="now-time">06:00 to 09:00</p>
+          <h3 class="now__title" id="now-title">Harbor Breakfast</h3>
+          <p class="now__host" id="now-host">with Mara Voss</p>
+          <p class="now__copy" id="now-copy">Coffee, the tide and the first ferry. Mara opens the line at 06:30.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--shows" id="shows" aria-labelledby="shows-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <h2 id="shows-title">The shows that make the week.</h2>
+          <p>Four regulars. The rest of the week is volunteers.</p>
+        </div>
+
+        <ol class="show-list">
+          <li class="show-row">
+            <p class="show-row__when"><span>Mon to Fri</span><span class="time">06:00</span></p>
+            <h3>Harbor Breakfast</h3>
+            <p class="show-row__host">Mara Voss</p>
+            <p class="show-row__copy">Coffee, the tide and the first ferry. A record before seven.</p>
+          </li>
+          <li class="show-row">
+            <p class="show-row__when"><span>Tue</span><span class="time">09:00</span></p>
+            <h3>The Long Pier</h3>
+            <p class="show-row__host">Eli Chen</p>
+            <p class="show-row__copy">One guest, one walk from the lock gate to the breakwater.</p>
+          </li>
+          <li class="show-row">
+            <p class="show-row__when"><span>Thu</span><span class="time">13:00</span></p>
+            <h3>Salt &amp; Signal</h3>
+            <p class="show-row__host">Nia Okafor</p>
+            <p class="show-row__copy">Records from the water, plus the shipping forecast.</p>
+          </li>
+          <li class="show-row">
+            <p class="show-row__when"><span>Fri</span><span class="time">18:00</span></p>
+            <h3>Night Ferry</h3>
+            <p class="show-row__host">Tomás Reyes</p>
+            <p class="show-row__copy">Dub, low light and the last boat in.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--room" id="room" aria-labelledby="room-title">
+      <div class="container room__in">
+        <figure class="studio-photo">
+          <img src="./img/shure-sm7-1920.jpg" alt="A dynamic microphone on a stand in front of grey acoustic foam." width="1920" height="2560" loading="lazy" decoding="async">
+          <figcaption>The vocal mic in Studio A. Photograph: <a href="https://commons.wikimedia.org/wiki/File:Shure_SM7.jpg">The Midnite Wolf</a> (CC0, Wikimedia Commons).</figcaption>
+        </figure>
+        <div class="room__copy">
+          <h2 id="room-title">One room, two microphones, a window on the quay.</h2>
+          <p>The studio is the old harbourmaster’s office at the end of Pier 9. One window looks across the ferry lane, the other into the room.</p>
+          <dl class="room__facts">
+            <div><dt>Getting here</dt><dd>Harbour station, 8 minutes on foot.</dd></div>
+            <div><dt>Step-free route</dt><dd>A lift reaches the studio door.</dd></div>
+            <div><dt>Inside</dt><dd>One desk, two mics and an accessible WC.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--visit" id="visit" aria-labelledby="visit-title">
+      <div class="container">
+        <div class="visit__head">
+          <h2 id="visit-title">Come and see how it is made.</h2>
+          <p>No booking needed. Last entry is 17:30.</p>
+        </div>
+        <figure class="visit-photo">
+          <img src="./img/newlyn-old-harbour-pier-july-2026-01-1920.jpg" alt="A Cornish fishing harbour with its old pier and town in soft evening light." width="1920" height="1440" loading="lazy" decoding="async">
+          <figcaption>A working quay in evening light. Photograph: <a href="https://commons.wikimedia.org/wiki/File:Newlyn_old_harbour_pier_July_2026_01.jpg">ArildV</a> (CC BY-SA 4.0, Wikimedia Commons).</figcaption>
+        </figure>
+        <div class="visit__grid">
+          <div class="visit__where">
+            <address>
+              Harbor Radio<br>
+              Pier 9, Old Fish Quay<br>
+              Portsmouth
+            </address>
+            <p>Access questions? Write to the station.</p>
+            <a class="key key--primary" href="mailto:hello@harborradio.example">Email the station</a>
+          </div>
+          <div class="visit__table-wrap">
+            <table class="open-table">
+              <caption>Open day, 22 November</caption>
+              <thead>
+                <tr><th scope="col">Time</th><th scope="col">What</th><th scope="col">Where</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row" class="time">11:00</th><td>Doors and coffee</td><td>Quay door</td></tr>
+                <tr><th scope="row" class="time">11:30</th><td>Studio tour</td><td>Studio A</td></tr>
+                <tr><th scope="row" class="time">13:00</th><td>The Long Pier, recorded live</td><td>Studio A</td></tr>
+                <tr><th scope="row" class="time">15:00</th><td>How a show gets made</td><td>Desk</td></tr>
+                <tr><th scope="row" class="time">17:00</th><td>Last entry</td><td>Quay door</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <div class="footer__brand">
+        <p class="footer__freq">88.4</p>
+        <p>Harbor Radio<br>Pier 9, Old Fish Quay<br>Portsmouth</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#day">The day</a>
+        <a href="#shows">Shows</a>
+        <a href="#room">The room</a>
+        <a href="#visit">Find us</a>
+      </nav>
+      <div class="footer__note">
+        <p>Fictional station. PowerUI proof page. Details are samples.</p>
+        <p>Receiver theme.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const shows = {
+        breakfast: {
+          time: "06:00 to 09:00",
+          title: "Harbor Breakfast",
+          host: "with Mara Voss",
+          copy: "Coffee, the tide and the first ferry. Mara opens the line at 06:30 and keeps the quay company until the yard wakes up."
+        },
+        longpier: {
+          time: "09:00 to 11:00",
+          title: "The Long Pier",
+          host: "with Eli Chen",
+          copy: "One guest, one walk from the lock gate to the breakwater."
+        },
+        opendesk: {
+          time: "11:00 to 13:00",
+          title: "Open Desk",
+          host: "with the volunteer desk",
+          copy: "Two hours of whatever arrived that morning: a demo, a notice, a spare ticket."
+        },
+        salt: {
+          time: "13:00 to 15:00",
+          title: "Salt & Signal",
+          host: "with Nia Okafor",
+          copy: "Records from within a mile of the water, plus the shipping forecast."
+        },
+        shift: {
+          time: "15:00 to 17:00",
+          title: "The Shift",
+          host: "with the Friday crew",
+          copy: "The changeover show. The desk hands over to the evening."
+        },
+        ferry: {
+          time: "17:00 to 19:00",
+          title: "Night Ferry",
+          host: "with Tomás Reyes",
+          copy: "Dub, low light and the last boat in."
+        },
+        lowlight: {
+          time: "19:00 to 21:00",
+          title: "Low Light",
+          host: "with June Bell",
+          copy: "Slow music for the walk home, after the streetlights come on."
+        },
+        after: {
+          time: "21:00 to midnight",
+          title: "After Hours",
+          host: "with the night desk",
+          copy: "Field recordings, quiet tapes and the harbor at low tide."
+        }
+      };
+
+      const buttons = Array.from(document.querySelectorAll(".show-block"));
+      const fields = {
+        time: document.getElementById("now-time"),
+        title: document.getElementById("now-title"),
+        host: document.getElementById("now-host"),
+        copy: document.getElementById("now-copy")
+      };
+
+      const select = (id) => {
+        const show = shows[id];
+        if (!show) return;
+        fields.time.textContent = show.time;
+        fields.title.textContent = show.title;
+        fields.host.textContent = show.host;
+        fields.copy.textContent = show.copy;
+        for (const button of buttons) button.setAttribute("aria-pressed", String(button.dataset.show === id));
+      };
+
+      for (const button of buttons) {
+        button.addEventListener("click", () => select(button.dataset.show));
+      }
+    })();
+  </script>
+</body>
+</html>

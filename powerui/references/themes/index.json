@@ -1475,6 +1475,53 @@
    "picture": "references/themes/piste.jpg"
   },
   {
+   "name": "Receiver",
+   "slug": "receiver",
+   "genre": "modern-minimal",
+   "posture": "committed",
+   "paper": {
+    "band": "light",
+    "L": 92,
+    "hue": 65
+   },
+   "display": {
+    "class": "display-condensed",
+    "face": "Antonio"
+   },
+   "accent": {
+    "band": "warm",
+    "hue": 25
+   },
+   "keywords": [
+    "radio",
+    "station",
+    "broadcast",
+    "community",
+    "music",
+    "audio",
+    "podcast",
+    "schedule",
+    "frequency",
+    "listen",
+    "fm",
+    "air",
+    "show",
+    "host",
+    "dj",
+    "sound",
+    "local",
+    "live",
+    "tune",
+    "programming",
+    "culture"
+   ],
+   "material": "warm putty-grey moulded plastic, a cream backlit tuning scale, oxblood ink, a red needle, fine tick marks, and one warm signal",
+   "file": "references/themes/receiver.md",
+   "photo": "warm con=8",
+   "pictured": "Receiver schedule, split hero",
+   "picture": "references/themes/receiver.jpg"
+  },
+  {
    "name": "Refract",
    "slug": "refract",
    "genre": "atmospheric",
