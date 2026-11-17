@@ -1,5 +1,5 @@
-# Hallmark run artifacts and screenshots
-.hallmark/
+# PowerUI run artifacts and screenshots
+.powerui/
 
 # Installer temp directory
 *.tmp-install/

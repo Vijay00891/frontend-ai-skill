@@ -1,4 +1,4 @@
-/* Hallmark · shape: Marquee Hero · genre: modern-minimal · theme: Wayfind (deal 3/3, colourway platform)
+/* PowerUI · shape: Marquee Hero · genre: modern-minimal · theme: Wayfind (deal 3/3, colourway platform)
    audience: ops · energy: 0 Sober · density: 3 Reference · idea: narrative/state machine
    hero: marquee statement and a sample plate on the paper; no photo in the fold; the ink network band opens the screen
    nav: edge-aligned static, the sample plate as the only sign · footer: mast, the wordmark and three columns
@@ -8,8 +8,8 @@
    P4 H4 E3 S4 R3 V4 · weakest: the board could go generic; the route-linked selection and the event timeline answer it
    signature: the selected route drives the journey and the board */
 
-/* Hallmark · waive 44c · hero ends at 667px; the sample plate is a 180px sign beside the form, not a split-hero visual · the sample board's marquee holds the paper screen; the network ink block opens beneath it */
-/* Hallmark · waive 79 · the hero's last content is the plate at 547; the network heading opens at 819 after the 667 ink seam · the paper-to-ink seam is the network band's bleed block; the board's next content opens below it */
+/* PowerUI · waive 44c · hero ends at 667px; the sample plate is a 180px sign beside the form, not a split-hero visual · the sample board's marquee holds the paper screen; the network ink block opens beneath it */
+/* PowerUI · waive 79 · the hero's last content is the plate at 547; the network heading opens at 819 after the 667 ink seam · the paper-to-ink seam is the network band's bleed block; the board's next content opens below it */
 
 :root {
   --color-paper-70: color-mix(in oklab, var(--color-paper) 70%, transparent);

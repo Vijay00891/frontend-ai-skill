@@ -1,8 +1,8 @@
-# Hallmark proof pages
+# PowerUI proof pages
 
-Four static pages built with Hallmark v2.1.0. They are proof that the skill can produce different content forms for different audiences without falling back on the same layout.
+Four static pages built with PowerUI v2.1.0. They are proof that the skill can produce different content forms for different audiences without falling back on the same layout.
 
-![Four Hallmark proof pages](proofs-grid.png)
+![Four PowerUI proof pages](proofs-grid.png)
 
 | Page | Audience | Content form | Idea | Theme |
 | --- | --- | --- | --- | --- |
@@ -33,9 +33,9 @@ All brands, names, copy and sample data are fictional. No real client metrics, t
 
 ## Not a component library
 
-These are finished compositions, not a kit to copy section by section. The skill's process and the `hallmark/references/` library are the reusable part; the pages are the evidence that the process produces more than one kind of result.
+These are finished compositions, not a kit to copy section by section. The skill's process and the `powerui/references/` library are the reusable part; the pages are the evidence that the process produces more than one kind of result.
 
-See [`../hallmark/SKILL.md`](../hallmark/SKILL.md) for the flow, the Floor and the gates.
+See [`../powerui/SKILL.md`](../powerui/SKILL.md) for the flow, the Floor and the gates.
 
 ## License
 

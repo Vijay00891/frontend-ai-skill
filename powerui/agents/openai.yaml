@@ -1,0 +1,13 @@
+interface:
+  display_name: PowerUI
+  short_description: Design skill. Pages that look made, not generated.
+  default_prompts:
+    - "$powerui a landing page for <product>"
+    - "$powerui a pricing page for <product>, custom"
+    - "$powerui a signup form component"
+    - "$powerui redesign <path to a page or an app>"
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies: []

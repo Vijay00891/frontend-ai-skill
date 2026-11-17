@@ -1,8 +1,8 @@
-/* Hallmark · shape: Proof Sheet (draw dealt Workbench, refused: no app to tour) · genre: editorial · theme: Riso (deal 1/3, seed dfb18989, r0) · audience: general · energy: 1 Considered · density: 2 Working · idea: transformation/layer stack · form: layer stack + job sheet · rejected: artifact, simulation · job: book · draw: 145181
+/* PowerUI · shape: Proof Sheet (draw dealt Workbench, refused: no app to tour) · genre: editorial · theme: Riso (deal 1/3, seed dfb18989, r0) · audience: general · energy: 1 Considered · density: 2 Working · idea: transformation/layer stack · form: layer stack + job sheet · rejected: artifact, simulation · job: book · draw: 145181
  * hero: banner, head over a full-bleed proof · nav: banner over a retracting bar · footer: index columns · imagery: none, the proof built in CSS · signature: the proof separating into its two drums
  * axes: light/grotesk-heavy/chromatic-pink · posture: committed · contrast: pass · fold: pass · v2.1.0 */
-/* Hallmark · pre-emit critique: P4 H5 E4 S3 R4 V5 · weakest: S, the job sheet could belong to any print shop; added the stock and ink fields */
-/* Hallmark · waive 38iii · Riso's Type section declares one focal word printed in both drums; the hero's "sheet" is that word · the pink copy behind the blue is the theme's prescribed overprint, once a page */
+/* PowerUI · pre-emit critique: P4 H5 E4 S3 R4 V5 · weakest: S, the job sheet could belong to any print shop; added the stock and ink fields */
+/* PowerUI · waive 38iii · Riso's Type section declares one focal word printed in both drums; the hero's "sheet" is that word · the pink copy behind the blue is the theme's prescribed overprint, once a page */
 @import url("./tokens.css");
 @import url("./base.css");
 
